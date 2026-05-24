@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年5月视频存档 | video</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --container-bg: white; --text-color: #333;
+            --nav-bg: white; --nav-text: #333; --border-color: rgba(0,0,0,0.1);
+        }
+        .dark-mode {
+            --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --container-bg: #1a1a2e; --text-color: #e0e0e0;
+            --nav-bg: #1f1f38; --nav-text: #e0e0e0; --border-color: rgba(255,255,255,0.1);
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-gradient); min-height: 100vh; padding: 20px; color: var(--text-color); transition: background 0.3s, color 0.3s; }
+        .container { max-width: 800px; margin: 0 auto; background: var(--container-bg); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; transition: background 0.3s, color 0.3s; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: var(--nav-bg); border-bottom: 1px solid var(--border-color); }
+        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: var(--nav-text); text-decoration: none; }
+        .nav-links a:hover { color: #667eea; }
+        .content { padding: 40px 30px; }
+        .content h1 { font-size: 2em; margin-bottom: 30px; color: var(--text-color); }
+        .history-list { display: flex; flex-direction: column; gap: 15px; }
+        .history-item { padding: 20px; background: linear-gradient(145deg, #f6f8fa 0%, #ffffff 100%); border-radius: 12px; text-decoration: none; color: var(--text-color); transition: all 0.3s; border: 2px solid transparent; }
+        .dark-mode .history-item { background: linear-gradient(145deg, #252540 0%, #1f1f38 100%); }
+        .history-item:hover { transform: translateX(10px); border-color: #667eea; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .history-item h3 { font-size: 1.3em; margin-bottom: 5px; }
+        .history-item p { opacity: 0.7; font-size: 0.9em; }
+        .dark-mode-toggle { cursor: pointer; padding: 10px 15px; background: #e8f4f8; border: none; border-radius: 8px; color: #1976d2; font-size: 1em; transition: background 0.3s, color 0.3s; }
+        @media (max-width: 768px) { .navbar { flex-direction: column; gap: 15px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="../../../index.html" class="navbar-brand">📺 video</a>
+            <ul class="nav-links">
+                <li><a href="../../../index.html">首页</a></li>
+                <li><a href="../../../about.html">关于</a></li>
+                <li><a href="../../../contact.html">联系</a></li>
+                <li><a href="../../../history.html" style="color: #667eea;">历史</a></li>
+                <li><button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>📅 2026年5月视频存档</h1>
+            <div class="history-list">
+                <a href="20260524.html" class="history-item">
+                    <h3>5月24日</h3>
+                    <p>2026年5月24日视频存档，中国名胜20景</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        }
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+</body>
+</html>
