@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>video - 全球20条热点视频</title>
+    <meta name="description" content="2026年5月24日全球20条热点视频，涵盖科技、政治、军事、经济等领域的最新动态">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-image: url('../../../images/website-background-8k.png');
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --container-bg: white; --text-color: #333;
+            --card-bg: linear-gradient(145deg, #f6f8fa 0%, #ffffff 100%);
+            --tag-bg: #e8f4f8; --tag-color: #1976d2;
+            --warning-bg: #fff3cd; --warning-border: #ffc107; --warning-color: #856404;
+            --footer-bg: #f8f9fa; --footer-color: #6c757d;
+            --nav-bg: white; --nav-text: #333; --search-bg: #f8f9fa; --border-color: rgba(0,0,0,0.1);
+=======
+    <title>video - 历史存档</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --container-bg: white; --text-color: #333;
+            --nav-bg: white; --nav-text: #333; --border-color: rgba(0,0,0,0.1);
+>>>>>>> ba2f0e77f06994ed81c540b4b13db539542f060d
+        }
+        .dark-mode {
+            --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --container-bg: #1a1a2e; --text-color: #e0e0e0;
+<<<<<<< HEAD
+            --card-bg: linear-gradient(145deg, #252540 0%, #1f1f38 100%);
+            --tag-bg: #1a3a5c; --tag-color: #64b5f6;
+            --warning-bg: #4a4732; --warning-border: #7c6d00; --warning-color: #d4c656;
+            --footer-bg: #16213e; --footer-color: #a0a0a0;
+            --nav-bg: #1f1f38; --nav-text: #e0e0e0; --search-bg: #252540; --border-color: rgba(255,255,255,0.1);
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.85); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        .navbar { background: var(--nav-bg); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+=======
+            --nav-bg: #1f1f38; --nav-text: #e0e0e0; --border-color: rgba(255,255,255,0.1);
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-gradient); min-height: 100vh; padding: 20px; color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; background: var(--container-bg); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; transition: background 0.3s; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: var(--nav-bg); border-bottom: 1px solid var(--border-color); }
+>>>>>>> ba2f0e77f06994ed81c540b4b13db539542f060d
+        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: #667eea; }
+        .theme-toggle { background: none; border: 2px solid var(--border-color); color: var(--nav-text); padding: 8px 16px; border-radius: 20px; cursor: pointer; }
+<<<<<<< HEAD
+        .theme-toggle:hover { background: var(--tag-bg); color: #667eea; }
+        .search-container { padding: 20px 30px; background: var(--nav-bg); border-bottom: 1px solid var(--border-color); }
+        .search-box { width: 100%; padding: 12px 20px; border: 2px solid var(--border-color); border-radius: 25px; font-size: 1em; background: var(--search-bg); color: var(--text-color); }
+        .search-box:focus { outline: none; border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.1); }
+        header { background: var(--bg-gradient); color: white; padding: 50px 30px; text-align: center; position: relative; overflow: hidden; }
+        @keyframes pulse { 0%,100%{transform:translate(-30%,-30%) scale(1);} 50%{transform:translate(-30%,-30%) scale(1.1);} }
+        header::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle,rgba(255,255,255,0.1) 0%,transparent 70%); animation:pulse 3s ease-in-out infinite; }
+        .cover-section { position:relative; width:100%; height:400px; margin-bottom:30px; border-radius:12px; overflow:hidden; box-shadow:0 8px 16px rgba(0,0,0,0.2); }
+        .cover-image { width:100%; height:100%; object-fit:cover; }
+        .cover-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(0,0,0,0.8),transparent); padding:40px 30px; color:white; opacity:0; transition:opacity .3s; }
+        .cover-section:hover .cover-overlay { opacity:1; }
+        .cover-title { font-size:3em; margin-bottom:10px; text-shadow:2px 2px 4px rgba(0,0,0,0.5); }
+        .cover-subtitle { font-size:1.3em; opacity:0.9; }
+        .mute-btn { position:absolute; top:15px; right:15px; background:rgba(0,0,0,0.5); border:none; border-radius:50%; width:40px; height:40px; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; z-index:10; }
+        .mute-btn:hover { background:rgba(0,0,0,0.7); }
+        @media(max-width:768px){.cover-section{height:300px;}.cover-title{font-size:2em;}.nav-links{display:none;}.news-grid{grid-template-columns:1fr;}}
+        .content { padding: 40px 30px; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-top: 40px; }
+        @media (max-width: 768px) { .news-grid { grid-template-columns: 1fr; } h1 { font-size: 1.8em; } }
+        .news-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--border-color); }
+        .news-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+        .news-card.hidden { display: none; }
+        .news-image { width: 100%; height: 280px; object-fit: cover; display: block; cursor: pointer; transition: transform 0.3s; }
+        .news-card:hover .news-image { transform: scale(1.05); }
+        .news-image { cursor: pointer; }
+        .news-content { padding: 20px; }
+        .news-number { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; font-weight: bold; margin-bottom: 12px; }
+        .news-title { font-size: 1.4em; font-weight: bold; margin-bottom: 12px; color: var(--text-color); line-height: 1.4; }
+        .news-summary { color: var(--text-color); opacity: 0.8; line-height: 1.7; font-size: 1em; }
+        .tag { display: inline-block; padding: 5px 12px; margin: 8px 4px 0 0; background: var(--tag-bg); color: var(--tag-color); border-radius: 12px; font-size: 0.85em; font-weight: 500; }
+        .warning { background: var(--warning-bg); border-left: 4px solid var(--warning-border); padding: 15px 20px; margin: 30px 0; border-radius: 4px; color: var(--warning-color); font-size: 0.95em; }
+        footer { background: var(--footer-bg); padding: 30px; text-align: center; color: var(--footer-color); font-size: 0.95em; border-top: 2px solid var(--border-color); }
+        footer a { color: #667eea; text-decoration: none; font-weight: 500; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links { margin-top: 15px; }
+        .footer-links a { margin: 0 10px; color: var(--footer-color); }
+        .comments-section { padding: 40px 30px; background: var(--container-bg); border-top: 2px solid var(--border-color); }
+        .comments-title { font-size: 1.5em; font-weight: bold; margin-bottom: 20px; color: var(--text-color); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">📺 video</a>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="contact.html">联系</a></li>
+            <li><a href="history.html">历史</a></li>
+            <li><a href="rss.xml">RSS</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 切换主题</button>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <div class="cover-section">
+                <video src="../../../videos/cover.mp4" autoplay loop muted playsinline class="cover-image" id="coverVideo" onmouseover="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='1'" onmouseout="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='0'"></video>
+                <button class="mute-btn" id="muteBtn" onclick="toggleMute()" title="开关声音">🔇</button>
+=======
+        .theme-toggle:hover { background: #e8f4f8; color: #667eea; }
+        .content { padding: 40px 30px; }
+        .cover-section { position:relative; width:100%; height:500px; margin-bottom:30px; border-radius:12px; overflow:hidden; box-shadow:0 8px 16px rgba(0,0,0,0.2); }
+        .cover-image { width:100%; height:100%; object-fit:cover; }
+        .cover-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(0,0,0,0.8),transparent); padding:40px 30px; color:white; opacity:0; transition:opacity .3s; }
+        .cover-section:hover .cover-overlay { opacity:1; }
+        .cover-subtitle { font-size:1.8em; opacity:0.9; text-shadow:2px 2px 4px rgba(0,0,0,0.5); }
+        .mute-btn { position:absolute; top:15px; right:15px; background:rgba(0,0,0,0.5); border:none; border-radius:50%; width:40px; height:40px; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; z-index:10; }
+        .mute-btn:hover { background:rgba(0,0,0,0.7); }
+        footer { background: var(--nav-bg); padding: 30px; text-align: center; color: var(--text-color); font-size: 0.95em; border-top: 1px solid var(--border-color); opacity: 0.7; }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links { margin-top: 15px; }
+        .footer-links a { margin: 0 10px; color: var(--text-color); }
+        @media (max-width: 768px) { .cover-section { height: 300px; } .cover-subtitle { font-size: 1.3em; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="../../../index.html" class="navbar-brand">📺 video</a>
+            <ul class="nav-links">
+                <li><a href="../../../index.html">首页</a></li>
+                <li><a href="../../../about.html">关于</a></li>
+                <li><a href="../../../contact.html">联系</a></li>
+                <li><a href="../../../history.html" style="color:#667eea;">历史</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </nav>
+        <div class="content">
+            <div class="cover-section">
+                <video src="20260522/cover.mp4" autoplay loop muted playsinline class="cover-image" id="coverVideo"></video>
+                <button class="mute-btn" id="muteBtn" onclick="toggleMute()">🔇</button>
+>>>>>>> ba2f0e77f06994ed81c540b4b13db539542f060d
+                <div class="cover-overlay">
+                    <p class="cover-subtitle">📺 乡村田园 · 2026年05月22日</p>
+                </div>
+            </div>
+<<<<<<< HEAD
+            
+            <div class="news-grid" id="newsGrid">
+
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_01_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">1</span>
+                        <h3 class="news-title">北京八达岭长城</h3>
+                        <p class="news-summary">蜿蜒起伏的城墙如巨龙盘踞山巅，金色晨光洒落千年古砖，壮阔河山尽收眼底</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_02_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">2</span>
+                        <h3 class="news-title">黄山迎客松</h3>
+                        <p class="news-summary">苍劲枝干如伸开的双臂，云海翻涌于奇松脚下，旭日东升染红天际</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_03_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">3</span>
+                        <h3 class="news-title">桂林漓江</h3>
+                        <p class="news-summary">竹筏悠悠漂过碧玉江水，喀纳斯峰林倒映如诗如画，渔火点点夜色温柔</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_04_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">4</span>
+                        <h3 class="news-title">张家界石林</h3>
+                        <p class="news-summary">石英砂岩柱林直插云霄，阳光穿云破雾洒下天光，如临仙境</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_05_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">5</span>
+                        <h3 class="news-title">北京故宫</h3>
+                        <p class="news-summary">金瓦红墙在阳光下熠熠生辉，白玉雕栏尽显皇家威仪，厚重的历史扑面而来</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_06_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">6</span>
+                        <h3 class="news-title">杭州西湖</h3>
+                        <p class="news-summary">三潭印月倒映湖中，断桥残雪垂柳依依，一片江南韵致诗情画意</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_07_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">7</span>
+                        <h3 class="news-title">黄河壶口瀑布</h3>
+                        <p class="news-summary">黄河水奔涌而下冲击岩石，水雾腾起如雷轰鸣，千军万马之势</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_08_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">8</span>
+                        <h3 class="news-title">陕西华山</h3>
+                        <p class="news-summary">悬崖峭壁栈道蜿蜒，云海翻涌于奇峰之间，天下第一险令人胆寒</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_09_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">9</span>
+                        <h3 class="news-title">苏州古典园林</h3>
+                        <p class="news-summary">花窗漏影，粉墙黛瓦，移步换景，每一处都是诗情画意的江南意境</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_10_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">10</span>
+                        <h3 class="news-title">拉萨布达拉宫</h3>
+                        <p class="news-summary">红白宫墙层叠于红山之上，金顶闪耀朝阳光芒，神圣庄严的世界屋脊</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_11_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">11</span>
+                        <h3 class="news-title">九寨沟五彩池</h3>
+                        <p class="news-summary">碧蓝翠绿鹅黄多彩，湖水清澈见底倒映彩林，人间仙境名不虚传</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_12_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">12</span>
+                        <h3 class="news-title">泰山玉皇顶</h3>
+                        <p class="news-summary">观日峰云海翻涌，金光破云而出气势磅礴，五岳之首一览众山小</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_13_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">13</span>
+                        <h3 class="news-title">厦门鼓浪屿</h3>
+                        <p class="news-summary">红瓦红砖小岛散落，碧海环抱日光岩矗立，文艺小资风情浓郁</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_14_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">14</span>
+                        <h3 class="news-title">敦煌莫高窟</h3>
+                        <p class="news-summary">九层楼红木依崖而建，弥勒大佛庄严肃穆，千佛洞穿越千年尘埃</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_15_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">15</span>
+                        <h3 class="news-title">稻城亚丁</h3>
+                        <p class="news-summary">三怙主神山一字排开，蓝色海子镶嵌于草甸之间，雪域高原的纯净与神圣</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_16_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">16</span>
+                        <h3 class="news-title">乐山大佛</h3>
+                        <p class="news-summary">背依灵山面朝三江，佛像巨大雕刻精美令人震撼，山即是佛佛即是山</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_17_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">17</span>
+                        <h3 class="news-title">承德避暑山庄</h3>
+                        <p class="news-summary">烟雨楼矗立雨中，湖面薄雾轻笼，杨柳朦胧诗意盎然，塞外江南</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_18_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">18</span>
+                        <h3 class="news-title">恩施大峡谷</h3>
+                        <p class="news-summary">一炷香石柱傲立峡谷之间，薄雾从谷底缓缓升起，天坑地缝绝美奇观</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_19_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">19</span>
+                        <h3 class="news-title">长白山天池</h3>
+                        <p class="news-summary">火山臼碧池嵌入群峰，十六峰环绕倒映蓝天白云，火山地貌举世罕见</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <video class="news-image" src="videos/china_20_clean.mp4" autoplay muted loop playsinline></video>
+                    <div class="news-content">
+                        <span class="news-number">20</span>
+                        <h3 class="news-title">苏州寒山寺</h3>
+                        <p class="news-summary">寺门黄墙青瓦，钟楼古钟静立，晨雾缭绕渔火点点，枫桥夜泊意境悠远</p>
+                        <div>
+                            <span class="tag">视频</span>
+                            <span class="tag">中国名胜</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <h2 class="comments-title">💬 评论区</h2>
+            <script src="https://giscus.app/client.js"
+                data-repo="yww001/news-blog" data-repo-id="R_kgDORthBdA"
+                data-category="Announcements" data-category-id="DIC_kwDORthBdM4C5AnK"
+                data-mapping="pathname" data-strict="0" data-reactions-enabled="1"
+                data-emit-metadata="0" data-input-position="top"
+                data-theme="preferred_color_scheme" data-lang="zh-CN"
+                crossorigin="anonymous" async></script>
+        </div>
+        <footer>
+            <p>🎬 视频生成与发布 by <a href="https://github.com/nickmccart/hn" target="_blank">Hermes Agent</a> | 图片生成 by <a href="https://build.nvidia.com/" target="_blank">NVIDIA AI</a></p>
+            <div class="footer-links">
+                <a href="index.html">首页</a> | <a href="about.html">关于</a> | <a href="contact.html">联系</a> | <a href="rss.xml">RSS 订阅</a>
+            </div>
+            <p style="margin-top:10px;font-size:0.9em;">所有视频内容仅供参考，请以官方发布为准 · 2026年5月24日</p>
+=======
+        </div>
+
+        <section style="padding: 40px 30px; border-top: 1px solid var(--border-color);">
+            <h2 style="font-size: 1.4em; font-weight: bold; margin-bottom: 20px; color: var(--text-color);">💬 发表评论</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;
+                    this.page.identifier = window.location.pathname;
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://tom-xst9ggxnjx.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>请启用 JavaScript 查看评论</noscript>
+        </section>
+
+        <footer>
+            <p>🎬 视频存档 | <a href="../../../index.html">返回首页</a></p>
+            <div class="footer-links">
+                <a href="../../../index.html">首页</a>
+                <a href="../../../about.html">关于</a>
+                <a href="../../../contact.html">联系</a>
+                <a href="../../../history.html">历史</a>
+            </div>
+>>>>>>> ba2f0e77f06994ed81c540b4b13db539542f060d
+        </footer>
+    </div>
+    <script>
+        function toggleTheme(){document.body.classList.toggle('dark-mode');localStorage.setItem('theme',document.body.classList.contains('dark-mode')?'dark':'light');}
+        const saved=localStorage.getItem('theme');if(saved==='dark')document.body.classList.add('dark-mode');
+        if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches&&!saved)document.body.classList.add('dark-mode');
+<<<<<<< HEAD
+        function searchVideo(){const i=document.getElementById('searchInput').value.toLowerCase();document.querySelectorAll('.news-card').forEach(c=>{const t=c.querySelector('.news-title').textContent.toLowerCase(),s=c.querySelector('.news-summary').textContent.toLowerCase(),g=Array.from(c.querySelectorAll('.tag')).map(x=>x.textContent.toLowerCase()).join(' ');(t.includes(i)||s.includes(i)||g.includes(i))?c.classList.remove('hidden'):c.classList.add('hidden');});}
+=======
+>>>>>>> ba2f0e77f06994ed81c540b4b13db539542f060d
+        function toggleMute(){const v=document.getElementById('coverVideo'),b=document.getElementById('muteBtn');v.muted=!v.muted;b.textContent=v.muted?'🔇':'🔊';}
+    </script>
+</body>
+</html>

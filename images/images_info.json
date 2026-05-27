@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "path": "/home/swg/.openclaw/workspace/news-blog/images/news_1.png",
+    "prompt": "香港股市上涨，恒生指数红色上涨曲线，科技股表现强劲，现代金融建筑背景"
+  },
+  {
+    "id": 2,
+    "path": "/home/swg/.openclaw/workspace/news-blog/images/news_2.png",
+    "prompt": "中国商务部大楼，商务人士会议，国际贸易制裁文件，现代办公环境"
+  },
+  {
+    "id": 3,
+    "path": "/home/swg/.openclaw/workspace/news-blog/images/news_3.png",
+    "prompt": "美国国会大厦，听证会场景，数据战略图表，人工智能和网络技术可视化"
+  },
+  {
+    "id": 4,
+    "path": "/home/swg/.openclaw/workspace/news-blog/images/news_4.png",
+    "prompt": "中国科技发展，半导体芯片，人工智能技术，现代化实验室和研发中心"
+  },
+  {
+    "id": 5,
+    "path": "/home/swg/.openclaw/workspace/news-blog/images/news_5.png",
+    "prompt": "霍尔木兹海峡，石油运输船，国际贸易路线，全球经济地图"
+  },
+  {
+    "id": 7,
+    "path": "/home/swg/.openclaw/workspace/news-blog/images/news_7.png",
+    "prompt": "北京会议中心，高层论坛，中国经济发展，现代化城市天际线"
+  },
+  {
+    "id": 8,
+    "path": "/home/swg/.openclaw/workspace/news-blog/images/news_8.png",
+    "prompt": "科技创新实验室，研发设备，政府政策文件，科技合作场景"
+  }
+]

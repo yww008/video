@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>技术博客 - 新闻聚合</title>
+    <description>AI驱动的智能新闻聚合平台，实时更新全球热点新闻</description>
+    <link>https://yww001.github.io/news-blog/</link>
+    <atom:link href="https://yww001.github.io/news-blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 22 Mar 2026 09:00:00 +0000</lastBuildDate>
+    <pubDate>Sun, 22 Mar 2026 09:00:00 +0000</pubDate>
+    <managingEditor>1975636393@qq.com (技术博客)</managingEditor>
+
+    <item>
+      <title>今日10大新闻 - 2026年3月22日</title>
+      <link>https://yww001.github.io/news-blog/</link>
+      <description>
+        美以联合打击伊朗进入第21天 | 马斯克重磅发布TeraFab芯片项目 | 特朗普推迟访华行程 | 中国车企全球销量首次跃居世界第一 | 图灵奖首次颁发给量子物理学家 | 傅盛深夜开撕周鸿祎 | 小米机器人进厂上岗 | 特斯拉推进Robotaxi项目 | OpenAI将扩大ChatGPT广告 | 五角大楼推进AI战场应用
+      </description>
+      <pubDate>Sun, 22 Mar 2026 09:00:00 +0000</pubDate>
+      <dc:creator>技术博客</dc:creator>
+      <category>新闻</category>
+      <category>科技</category>
+      <category>国际</category>
+    </item>
+
+    <item>
+      <title>美以联合打击伊朗进入第21天</title>
+      <link>https://yww001.github.io/news-blog/</link>
+      <description>
+        美国和以色列通过"史诗狂怒行动"持续打击伊朗境内军事目标，已击毙伊朗情报部长、巴斯基部队指挥官等多名高层官员。特朗普称行动进度"远超预期"，声称几乎摧毁了伊朗海军和领导层。
+      </description>
+      <pubDate>Sun, 22 Mar 2026 09:00:00 +0000</pubDate>
+      <dc:creator>技术博客</dc:creator>
+      <category>军事</category>
+      <category>国际</category>
+      <category>美国</category>
+    </item>
+
+    <item>
+      <title>马斯克重磅发布TeraFab芯片项目</title>
+      <link>https://yww001.github.io/news-blog/</link>
+      <description>
+        SpaceSpace、特斯拉和xAI联合宣布TeraFab项目，将在奥斯汀建设先进技术工厂，目标年产超1太瓦算力芯片，其中80%用于太空领域，20%用于地面应用，包括人形机器人和特斯拉汽车。
+      </description>
+      <pubDate>Sun, 22 Mar 2026 09:00:00 +0000</pubDate>
+      <dc:creator>技术博客</dc:creator>
+      <category>科技</category>
+      <category>马斯克</category>
+      <category>芯片制造</category>
+    </item>
+
+    <item>
+      <title>特朗普推迟访华行程</title>
+      <link>https://yww001.github.io/news-blog/</link>
+      <description>
+        特朗普总统因伊朗战争要求将访华行程推迟约一个月，表示"我必须留在这里"。此决定与霍尔木兹海峡局势和伊朗战争密切相关。
+      </description>
+      <pubDate>Sun, 22 Mar 2026 09:00:00 +0000</pubDate>
+      <dc:creator>技术博客</dc:creator>
+      <category>政治</category>
+      <category>中美关系</category>
+      <category>外交</category>
+    </item>
+
+    <item>
+      <title>中国车企全球销量首次跃居世界第一</title>
+      <link>https://yww001.github.io/news-blog/</link>
+      <description>
+        根据日媒报道，中国车企去年全球累计销量近2700万辆，首次超越日本居世界第一。比亚迪在纯电动汽车领域超越特斯拉居全球首位，中国汽车产业迎来历史性突破。
+      </description>
+      <pubDate>Sun, 22 Mar 2026 09:00:00 +0000</pubDate>
+      <dc:creator>技术博客</dc:creator>
+      <category>汽车</category>
+      <category>比亚迪</category>
+      <category>特斯拉</category>
+    </item>
+
+  </channel>
+</rss>

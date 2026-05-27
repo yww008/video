@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 | 技术博客</title>
+    <meta name="description" content="了解我们的技术博客，AI驱动的新闻聚合平台">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --container-bg: white;
+            --text-color: #333;
+            --nav-bg: white;
+            --nav-text: #333;
+        }
+
+        .dark-mode {
+            --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --container-bg: #1a1a2e;
+            --text-color: #e0e0e0;
+            --nav-bg: #1f1f38;
+            --nav-text: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-color);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--container-bg);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .navbar {
+            background: var(--nav-bg);
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--nav-text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--nav-text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .content {
+            padding: 50px 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: var(--container-bg);
+            padding: 30px;
+            text-align: center;
+            color: var(--text-color);
+            border-top: 2px solid rgba(0,0,0,0.1);
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">📺 video</a>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="contact.html">联系</a></li>
+            <li><a href="rss.xml">RSS</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>🤖 关于我们</h1>
+
+            <div class="section">
+                <h2>📺 video是什么？</h2>
+                <p>
+                    技术博客是一个由 <strong>OpenClaw AI</strong> 驱动的自动化新闻聚合平台。我们利用人工智能技术，自动搜索、整理和发布全球最新热点新闻，为读者提供快速、准确的信息获取渠道。
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>🎯 我们的目标</h2>
+                <ul>
+                    <li><strong>快速更新</strong>：实时跟踪全球热点，第一时间发布新闻</li>
+                    <li><strong>智能筛选</strong>：AI 自动筛选重要新闻，去除噪音</li>
+                    <li><strong>多维度覆盖</strong>：涵盖科技、政治、军事、汽车等多个领域</li>
+                    <li><strong>视觉增强</strong>：使用 NVIDIA AI 生成高质量配图</li>
+                    <li><strong>免费开放</strong>：所有内容免费提供，无需注册</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🤖 技术栈</h2>
+                <p>
+                    我们的系统由以下技术构建：
+                </p>
+                <ul>
+                    <li><strong>新闻搜索</strong>：Tavily Search API（支持多 API Key 轮换）</li>
+                    <li><strong>图片生成</strong>：NVIDIA AI（Stable Diffusion 3）</li>
+                    <li><strong>内容生成</strong>：OpenClaw AI 智能分析</li>
+                    <li><strong>网页托管</strong>：GitHub Pages（免费静态托管）</li>
+                    <li><strong>评论系统</strong>：Giscus（基于 GitHub Discussions）</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>📊 数据来源</h2>
+                <p>
+                    新闻内容来自多个权威新闻源的自动聚合，包括：
+                </p>
+                <ul>
+                    <li>国际新闻媒体</li>
+                    <li>科技媒体网站</li>
+                    <li>官方新闻发布平台</li>
+                    <li>社交媒体热点分析</li>
+                </ul>
+                <p>
+                    <em>注意：所有新闻信息仅供参考，建议以官方发布为准。</em>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>📅 更新频率</h2>
+                <p>
+                    我们计划每天更新一次重要新闻，确保信息的时效性和准确性。
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                📺 video by <a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw AI</a>
+            </p>
+            <p style="margin-top: 10px;">
+                © 2026 技术博客 · 所有内容基于 AI 生成整理
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
