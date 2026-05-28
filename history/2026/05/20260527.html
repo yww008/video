@@ -3,163 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026年05月27日 - video</title>
+    <title>🦁 野生动物世界 - 历史归档</title>
+    <meta name="description" content="AI生成野生动物短视频合集 - 2026年5月27日">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --bg-image: url('../../../images/website-background-8k.png');
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --container-bg: white; --text-color: #333;
-            --card-bg: linear-gradient(145deg, #f6f8fa 0%, #ffffff 100%);
-            --tag-bg: #e8f4f8; --tag-color: #1976d2;
-            --footer-bg: #f8f9fa; --footer-color: #6c757d;
-            --nav-bg: white; --nav-text: #333; --border-color: rgba(0,0,0,0.1);
+            --bg-image: url('../../images/website-background-8k.png');
+            --container-bg: rgba(255,255,255,0.92);
+            --text-color: #1a1a1a;
+            --footer-bg: rgba(255,255,255,0.9); --footer-color: #666;
+            --nav-bg: rgba(255,255,255,0.95); --nav-text: #1a1a1a; --border-color: rgba(0,0,0,0.1);
         }
         .dark-mode {
-            --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            --container-bg: #1a1a2e; --text-color: #e0e0e0;
-            --card-bg: linear-gradient(145deg, #252540 0%, #1f1f38 100%);
-            --tag-bg: #1a3a5c; --tag-color: #64b5f6;
-            --footer-bg: #16213e; --footer-color: #a0a0a0;
-            --nav-bg: #1f1f38; --nav-text: #e0e0e0; --border-color: rgba(255,255,255,0.1);
+            --bg-image: url('../../images/website-background-8k.png');
+            --container-bg: rgba(20,20,40,0.92);
+            --text-color: #e0e0e0;
+            --footer-bg: rgba(20,20,40,0.9); --footer-color: #aaa;
+            --nav-bg: rgba(30,30,60,0.95); --nav-text: #e0e0e0; --border-color: rgba(255,255,255,0.1);
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
-        .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.85); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
-        .navbar { background: var(--nav-bg); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; border-radius: 16px; overflow: hidden; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); }
         .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
         .nav-links { display: flex; gap: 20px; list-style: none; }
         .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
-        .nav-links a:hover { color: #667eea; }
-        .cover-section { position:relative; width:100%; height:400px; margin-bottom:30px; border-radius:12px; overflow:hidden; box-shadow:0 8px 16px rgba(0,0,0,0.2); }
-        .cover-image { width:100%; height:100%; object-fit:cover; }
-        .cover-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(0,0,0,0.8),transparent); padding:40px 30px; color:white; opacity:0; transition:opacity .3s; }
-        .cover-section:hover .cover-overlay { opacity:1; }
-        .cover-subtitle { font-size:1.3em; opacity:0.9; }
-        .content { padding: 40px 30px; }
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-top: 40px; }
-        @media (max-width: 768px) { .news-grid { grid-template-columns: 1fr; } }
-        .news-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--border-color); }
-        .news-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
-        .news-image { width: 100%; height: 280px; object-fit: cover; display: block; cursor: pointer; transition: transform 0.3s; }
-        .news-card:hover .news-image { transform: scale(1.05); }
-        .news-content { padding: 20px; }
-        .news-number { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; font-weight: bold; margin-bottom: 12px; }
-        .news-title { font-size: 1.4em; font-weight: bold; margin-bottom: 12px; color: var(--text-color); line-height: 1.4; }
-        .news-summary { color: var(--text-color); opacity: 0.8; line-height: 1.7; font-size: 1em; }
-        .tag { display: inline-block; padding: 5px 12px; margin: 8px 4px 0 0; background: var(--tag-bg); color: var(--tag-color); border-radius: 12px; font-size: 0.85em; font-weight: 500; }
-        footer { background: var(--footer-bg); padding: 30px; text-align: center; color: var(--footer-color); font-size: 0.95em; border-top: 2px solid var(--border-color); }
-        footer a { color: #667eea; text-decoration: none; font-weight: 500; }
-        .footer-links { margin-top: 15px; }
+        .nav-links a:hover { color: #e65100; }
+        .theme-toggle { background: none; border: 2px solid var(--border-color); color: var(--nav-text); padding: 8px 16px; border-radius: 20px; cursor: pointer; }
+        .theme-toggle:hover { background: #fff3e0; color: #e65100; }
+        .cover-section { position: relative; width: 100%; height: 500px; margin: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        .cover-section video { width: 100%; height: 100%; object-fit: cover; background: #000; }
+        .cover-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 50px 30px 30px; color: white; }
+        .cover-subtitle { font-size: 1.8em; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
+        .mute-btn { position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.5); border: none; border-radius: 50%; width: 44px; height: 44px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; z-index: 10; }
+        .mute-btn:hover { background: rgba(0,0,0,0.75); }
+        footer { background: var(--footer-bg); color: var(--footer-color); text-align: center; padding: 30px; border-top: 1px solid var(--border-color); }
+        footer a { color: #e65100; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links { margin-top: 12px; }
         .footer-links a { margin: 0 10px; color: var(--footer-color); }
+        @media (max-width: 768px) { .cover-section { height: 300px; } .cover-subtitle { font-size: 1.3em; } .nav-links { display: none; } }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="../../../index.html" class="navbar-brand">📺 video</a>
-        <ul class="nav-links">
-            <li><a href="../../../index.html">首页</a></li>
-            <li><a href="../../../about.html">关于</a></li>
-            <li><a href="../../../contact.html">联系</a></li>
-            <li><a href="../../../history.html">历史</a></li>
-        </ul>
-    </nav>
     <div class="container">
-        <div class="content">
-            <div class="cover-section">
-                <video src="../../../videos/cover.mp4" autoplay loop muted playsinline class="cover-image"></video>
-                <div class="cover-overlay">
-                    <p class="cover-subtitle">2026年05月27日 · 草原动物主题</p>
-                </div>
-            </div>
-            <div class="news-grid">
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_01_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">1</span><h3 class="news-title">羚羊蹄下视角</h3><p class="news-summary">镜头埋在草皮下仅露出前方，上百只高角羚羊的蹄子从镜头上方奔腾而过，阳光透过蹄缝洒下闪动光斑</p><div><span class="tag">草原</span><span class="tag">羚羊</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_02_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">2</span><h3 class="news-title">金合欢树顶俯拍：猎豹伏击</h3><p class="news-summary">猎豹从金合欢树顶俯拍，在草丛间匍匐移动发现目标后猛地弹出冲刺，流线型轨迹清晰完整</p><div><span class="tag">草原</span><span class="tag">猎豹</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_03_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">3</span><h3 class="news-title">倒影视角：狼群踏浅湾</h3><p class="news-summary">三只灰狼从浅湾岸边奔跑，蓝色天空和灰色狼的身影在水面倒影里不断晃动，狼爪溅起水花打碎又重新拼接</p><div><span class="tag">草原</span><span class="tag">狼群</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_04_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">4</span><h3 class="news-title">慢动作：斑马条纹穿过镜头</h3><p class="news-summary">斑马群一匹接一匹从镜头前方横穿而过，黑白条纹在阳光下匀速流动，鬃毛扫过草叶，韵律感十足</p><div><span class="tag">草原</span><span class="tag">斑马</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_05_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">5</span><h3 class="news-title">风滚草视角：跟着野驴跑</h3><p class="news-summary">镜头固定在滚动的风滚草上跟着野驴群滚动，前方野驴背影不断靠近又拉开，草叶擦过镜头边缘，沉浸感十足</p><div><span class="tag">草原</span><span class="tag">野驴</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_06_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">6</span><h3 class="news-title">鬃毛特写：角马奔行带风</h3><p class="news-summary">紧紧贴住领头角马的颈部对焦深色鬃毛，角马奔跑时鬃毛被风吹得向后疯狂飘动，细碎汗珠从鬃毛里飞出</p><div><span class="tag">草原</span><span class="tag">角马</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_07_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">7</span><h3 class="news-title">晨昏剪影：狼群奔过地平线</h3><p class="news-summary">黎明时分草原地平线泛着淡粉橘色柔光，五只狼群排成一列从地平线这头跑到那头，黑色剪影衬着渐变天空格外有张力</p><div><span class="tag">草原</span><span class="tag">狼群</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_08_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">8</span><h3 class="news-title">尘雾里的猎豹：高速残影</h3><p class="news-summary">正午干热草原猎豹全速从尘雾里冲出来，干燥尘土裹住半个身体，四肢和头部在尘雾里隐约可见，速度快得拉出半透明残影</p><div><span class="tag">草原</span><span class="tag">猎豹</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_09_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">9</span><h3 class="news-title">跳羚腾空：四脚离地</h3><p class="news-summary">跳羚遇到天敌后一边奔跑一边连续腾空跳跃，每次四脚完全离地，脊背拱起像一张绷紧的弓，白色腹部在阳光下亮得显眼</p><div><span class="tag">草原</span><span class="tag">跳羚</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_10_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">10</span><h3 class="news-title">洞穴视角：胡狼追兔</h3><p class="news-summary">镜头放在草原旱獭洞穴里对着洞口向外拍，黄褐色野兔从洞口飞快窜过，胡狼的爪子紧跟着从镜头前冲过，带起风晃动洞口草叶</p><div><span class="tag">草原</span><span class="tag">胡狼</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_11_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">11</span><h3 class="news-title">雨后草露：黄羊溅落水珠</h3><p class="news-summary">暴雨过后草原每片草叶都挂着饱满水珠，黄羊群跑过羊身扫过草叶，无数水珠被甩向空中，阳光折射出细碎彩虹</p><div><span class="tag">草原</span><span class="tag">黄羊</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_12_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">12</span><h3 class="news-title">热气球视角：角马群成河</h3><p class="news-summary">从高空热气球上往下拍，成千上万头角马排成一条长长的队伍，顺着草原纹路不断向前移动，像一条流动的棕色河流</p><div><span class="tag">草原</span><span class="tag">角马</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_13_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">13</span><h3 class="news-title">牛背视角：跟着牛羚迁徙</h3><p class="news-summary">镜头固定在迁徙牛羚的背部，对准前方牛羚的屁股和远处草原，牛羚奔跑时背部上下晃动，沉浸式感受大部队迁徙的颠簸感</p><div><span class="tag">草原</span><span class="tag">牛羚</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_14_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">14</span><h3 class="news-title">星夜兼程：狼群月下奔行</h3><p class="news-summary">满月深夜草原铺满银蓝色月光，狼群排成一列在草地上奔跑，月光把狼的影子长长拉在草地上，草叶泛着冷银光泽</p><div><span class="tag">草原</span><span class="tag">狼群</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_15_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">15</span><h3 class="news-title">花豹爪下：黑斑羚逃过大树</h3><p class="news-summary">花豹从金合欢树横枝上跃下，爪子几乎擦着黑斑羚的后背，黑斑羚猛地侧身躲开往草原深处跑去，花豹的影子从镜头上方扫过</p><div><span class="tag">草原</span><span class="tag">花豹</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_16_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">16</span><h3 class="news-title">沙尘暴里：野驴逆风穿行</h3><p class="news-summary">春季沙尘暴席卷草原漫天黄沙，一群蒙古野驴逆风朝着镜头方向走来，身影在沙尘暴里从模糊慢慢变清晰，四蹄稳稳踏过黄沙</p><div><span class="tag">草原</span><span class="tag">野驴</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_17_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">17</span><h3 class="news-title">花粉季：黄羊带起花雾</h3><p class="news-summary">草原野花盛开的春季，无数黄色花粉飘在空气里，黄羊群跑过身体带起风搅动花粉形成淡黄色花雾，阳光穿过花雾变得朦胧柔和</p><div><span class="tag">草原</span><span class="tag">黄羊</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_18_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">18</span><h3 class="news-title">山岩缝隙：盘羊奔过坡顶</h3><p class="news-summary">镜头藏在山间草原的岩石缝隙里，一群大角盘羊顺着坡顶跑过，巨大的弯角一个接一个从缝隙前经过，岩石框住画面局部构图有故事感</p><div><span class="tag">草原</span><span class="tag">盘羊</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_19_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">19</span><h3 class="news-title">慢镜头：薮猫扑鼠</h3><p class="news-summary">高草草原里薮猫压低身体快速奔跑，最后一步蹬地腾空整个身体在空中展开前爪向前伸，朝着田鼠扑下去，慢动作放大整个腾空过程</p><div><span class="tag">草原</span><span class="tag">薮猫</span></div></div>
-                </div>
-                <div class="news-card">
-                    <video class="news-image" src="../../../videos/china_20_clean.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content"><span class="news-number">20</span><h3 class="news-title">火烧云下：猎豹站坡顶</h3><p class="news-summary">傍晚火烧云把整个天空染成橙红色，猎豹捕猎结束后慢步跑上坡顶停在最高处回头望了一眼，橙红色霞光把皮毛染成金色</p><div><span class="tag">草原</span><span class="tag">猎豹</span></div></div>
-                </div>
+        <nav class="navbar">
+            <a href="../../index.html" class="navbar-brand">🦁 video</a>
+            <ul class="nav-links">
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="../../about.html">关于</a></li>
+                <li><a href="../../contact.html">联系</a></li>
+                <li><a href="../../history.html">历史</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </nav>
+
+        <div class="cover-section">
+            <video src="cover.mp4" autoplay loop muted playsinline class="cover-image" id="coverVideo"></video>
+            <button class="mute-btn" id="muteBtn" onclick="toggleMute()">🔇</button>
+            <div class="cover-overlay">
+                <p class="cover-subtitle">🦁 野生动物世界 · 2026年5月27日</p>
             </div>
         </div>
-        <footer>
-            <p>🎬 视频生成与发布 by Hermes Agent | 发布日期：2026年05月27日</p>
-            <div class="footer-links">
-                <a href="../../../index.html">首页</a> | <a href="../../../about.html">关于</a> | <a href="../../../contact.html">联系</a> | <a href="../index.html">返回历史</a>
-            </div>
-        </footer>
     </div>
+
+    <script>
+        function toggleTheme() { document.body.classList.toggle('dark-mode'); localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); }
+        function toggleMute() { const v = document.getElementById('coverVideo'); v.muted = !v.muted; document.getElementById('muteBtn').textContent = v.muted ? '🔇' : '🔊'; }
+        if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+    </script>
 </body>
 </html>
