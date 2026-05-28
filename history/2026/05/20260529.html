@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚗 公路世界 · 2026年5月29日 - video</title>
+    <meta name="description" content="AI生成公路场景短视频，2026年5月29日归档">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-image: url('../images/website-background-8k.png');
+            --container-bg: rgba(255,255,255,0.92);
+            --text-color: #1a1a1a;
+            --footer-bg: rgba(255,255,255,0.9); --footer-color: #666;
+            --nav-bg: rgba(255,255,255,0.95); --nav-text: #1a1a1a; --border-color: rgba(0,0,0,0.1);
+        }
+        .dark-mode {
+            --bg-image: url('../images/website-background-8k.png');
+            --container-bg: rgba(20,20,40,0.92);
+            --text-color: #e0e0e0;
+            --footer-bg: rgba(20,20,40,0.9); --footer-color: #aaa;
+            --nav-bg: rgba(30,30,60,0.95); --nav-text: #e0e0e0; --border-color: rgba(255,255,255,0.1);
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; border-radius: 16px; overflow: hidden; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); }
+        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: #1565c0; }
+        .theme-toggle { background: none; border: 2px solid var(--border-color); color: var(--nav-text); padding: 8px 16px; border-radius: 20px; cursor: pointer; }
+        .theme-toggle:hover { background: #e3f2fd; color: #1565c0; }
+        .cover-section { position: relative; width: 100%; height: 500px; margin-bottom: 30px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        .cover-section video { width: 100%; height: 100%; object-fit: cover; background: #000; }
+        .cover-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 50px 30px 30px; color: white; opacity: 0; transition: opacity 0.3s; }
+        .cover-section:hover .cover-overlay { opacity: 1; }
+        .cover-subtitle { font-size: 1.8em; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
+        .mute-btn { position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.5); border: none; border-radius: 50%; width: 44px; height: 44px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; z-index: 10; }
+        .mute-btn:hover { background: rgba(0,0,0,0.75); }
+        footer { background: var(--footer-bg); color: var(--footer-color); text-align: center; padding: 30px; border-top: 1px solid var(--border-color); }
+        footer a { color: #1565c0; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links { margin-top: 12px; }
+        .footer-links a { margin: 0 10px; color: var(--footer-color); }
+        @media (max-width: 768px) { .cover-section { height: 300px; } .cover-subtitle { font-size: 1.3em; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="/video/index.html" class="navbar-brand">🚗 video</a>
+            <ul class="nav-links">
+                <li><a href="/video/index.html">首页</a></li>
+                <li><a href="/video/about.html">关于</a></li>
+                <li><a href="/video/contact.html">联系</a></li>
+                <li><a href="/video/history.html">历史</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </nav>
+
+        <div class="cover-section">
+            <video id="coverVideo" autoplay muted loop playsinline>
+                <source src="20260529.mp4" type="video/mp4">
+            </video>
+            <button class="mute-btn" id="muteBtn" onclick="toggleMute()">🔇</button>
+            <div class="cover-overlay">
+                <p class="cover-subtitle">🚗 公路世界 · 2026年5月29日</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+        function toggleMute() {
+            const video = document.getElementById('coverVideo');
+            video.muted = !video.muted;
+            document.getElementById('muteBtn').textContent = video.muted ? '🔇' : '🔊';
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+    <footer>
+        <p>🎬 AI视频生成 · <a href="/video/index.html">返回首页</a></p>
+        <div class="footer-links">
+            <a href="/video/index.html">首页</a>
+            <a href="/video/about.html">关于</a>
+            <a href="/video/contact.html">联系</a>
+            <a href="/video/history.html">历史</a>
+        </div>
+    </footer>
+</body>
+</html>
