@@ -1,336 +1,336 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🐑 草原羊群 - AI视频专辑</title>
-    <meta name="description" content="草原羊群·牧民放牧主题视频专辑 - 2026年6月22日">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg-image: url('images/website-background-8k.png');
-            --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #2d3a4a 100%);
-            --container-bg: white; --text-color: #333;
-            --card-bg: linear-gradient(145deg, #f0f4f8 0%, #ffffff 100%);
-            --tag-bg: #e8f0fe; --tag-color: #1565c0;
-            --warning-bg: #fff3cd; --warning-border: #ffc107; --warning-color: #856404;
-            --footer-bg: #f0f4f8; --footer-color: #6c757d;
-            --nav-bg: white; --nav-text: #333; --search-bg: #f8f9fa; --border-color: rgba(0,0,0,0.1);
-        }
-        .dark-mode {
-            --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            --container-bg: #1a1a2e; --text-color: #e0e0e0;
-            --card-bg: linear-gradient(145deg, #2a3a4a 0%, #1f2f3f 100%);
-            --tag-bg: #1a3a5a; --tag-color: #64b5f6;
-            --warning-bg: #4a4732; --warning-border: #7c6d00; --warning-color: #d4c656;
-            --footer-bg: #16213e; --footer-color: #a0a0a0;
-            --nav-bg: #1f2f3f; --nav-text: #e0e0e0; --search-bg: #2a3a4a; --border-color: rgba(255,255,255,0.1);
-        }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
-        .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.88); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
-        .navbar { background: var(--nav-bg); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
-        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
-        .nav-links { display: flex; gap: 20px; list-style: none; }
-        .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
-        .nav-links a:hover { color: #1565c0; }
-        .theme-toggle { background: none; border: 2px solid var(--border-color); color: var(--nav-text); padding: 8px 16px; border-radius: 20px; cursor: pointer; }
-        .theme-toggle:hover { background: var(--tag-bg); color: #1565c0; }
-        .search-container { padding: 20px 30px; background: var(--nav-bg); border-bottom: 1px solid var(--border-color); }
-        .search-box { width: 100%; padding: 12px 20px; border: 2px solid var(--border-color); border-radius: 25px; font-size: 1em; background: var(--search-bg); color: var(--text-color); }
-        .search-box:focus { outline: none; border-color: #1565c0; box-shadow: 0 0 0 3px rgba(21,101,192,0.1); }
-        header { background: var(--bg-gradient); color: white; padding: 50px 30px; text-align: center; position: relative; overflow: hidden; }
-        @keyframes pulse { 0%,100%{transform:translate(-30%,-30%) scale(1);} 50%{transform:translate(-30%,-30%) scale(1.1);} }
-        header::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle,rgba(255,255,255,0.1) 0%,transparent 70%); animation:pulse 3s ease-in-out infinite; }
-        .cover-section { position:relative; width:100%; height:400px; margin-bottom:30px; border-radius:12px; overflow:hidden; box-shadow:0 8px 16px rgba(0,0,0,0.2); }
-        .cover-image { width:100%; height:100%; object-fit:cover; }
-        .cover-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(0,0,0,0.8),transparent); padding:40px 30px; color:white; opacity:0; transition:opacity .3s; }
-        .cover-section:hover .cover-overlay { opacity:1; }
-        .cover-title { font-size:3em; margin-bottom:10px; text-shadow:2px 2px 4px rgba(0,0,0,0.5); }
-        .cover-subtitle { font-size:1.3em; opacity:0.9; }
-        .mute-btn { position:absolute; top:15px; right:15px; background:rgba(0,0,0,0.5); border:none; border-radius:50%; width:40px; height:40px; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; z-index:10; }
-        .mute-btn:hover { background:rgba(0,0,0,0.7); }
-        @media(max-width:768px){.cover-section{height:300px;}.cover-title{font-size:2em;}.nav-links{display:none;}.news-grid{grid-template-columns:1fr;}}
-        .content { padding: 40px 30px; }
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-top: 40px; }
-        @media (max-width: 768px) { .news-grid { grid-template-columns: 1fr; } h1 { font-size: 1.8em; } }
-        .video-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--border-color); }
-        .video-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
-        .video-card.hidden { display: none; }
-        .news-image { width: 100%; height: 280px; object-fit: cover; display: block; cursor: pointer; transition: transform 0.3s; }
-        .video-card:hover .news-image { transform: scale(1.05); }
-        .news-image { cursor: pointer; }
-        .news-content { padding: 20px; }
-        .news-number { display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; font-weight: bold; margin-bottom: 12px; }
-        .news-title { font-size: 1.4em; font-weight: bold; margin-bottom: 12px; color: var(--text-color); line-height: 1.4; }
-        .news-summary { color: var(--text-color); opacity: 0.8; line-height: 1.7; font-size: 1em; }
-        .tag { display: inline-block; padding: 5px 12px; margin: 8px 4px 0 0; background: var(--tag-bg); color: var(--tag-color); border-radius: 12px; font-size: 0.85em; font-weight: 500; }
-        .warning { background: var(--warning-bg); border-left: 4px solid var(--warning-border); padding: 15px 20px; margin: 30px 0; border-radius: 4px; color: var(--warning-color); font-size: 0.95em; }
-        footer { background: var(--footer-bg); padding: 30px; text-align: center; color: var(--footer-color); font-size: 0.95em; border-top: 2px solid var(--border-color); }
-        footer a { color: #1565c0; text-decoration: none; font-weight: 500; }
-        footer a:hover { text-decoration: underline; }
-        .footer-links { margin-top: 15px; }
-        .footer-links a { margin: 0 10px; color: var(--footer-color); }
-        .comments-section { padding: 40px 30px; background: var(--container-bg); border-top: 2px solid var(--border-color); }
-        .comments-title { font-size: 1.5em; font-weight: bold; margin-bottom: 20px; color: var(--text-color); }
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <a href="index.html" class="navbar-brand">🐑 video</a>
-        <ul class="nav-links">
-            <li><a href="index.html">首页</a></li>
-            <li><a href="about.html">关于</a></li>
-            <li><a href="contact.html">联系</a></li>
-            <li><a href="history.html">历史</a></li>
-        </ul>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 切换主题</button>
-    </nav>
-    <div class="container">
-        <div class="content">
-            <div class="cover-section">
-                <video src="videos/cover.mp4" autoplay loop playsinline class="cover-image" id="coverVideo" onmouseover="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='1'" onmouseout="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='0'"></video>
-                <button class="mute-btn" id="muteBtn" onclick="toggleMute()" title="开关声音">🔇</button>
-                <div class="cover-overlay">
-                    <p class="cover-subtitle">🐑 草原羊群·牧民放牧 · 2026年6月22日</p>
-                </div>
-            </div>
-
-            <div class="news-grid" id="newsGrid">
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_01.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#1</span>
-                        <h3 class="news-title">🌄 晨光牧羊</h3>
-                        <p class="news-summary">清晨阳光洒在草原上，牧民身着蒙古袍打开栅栏，羊群如白云般涌出</p>
-                        <div><span class="tag">晨光</span><span class="tag">羊群</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_02.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#2</span>
-                        <h3 class="news-title">🌿 羊群吃草</h3>
-                        <p class="news-summary">广袤草原上羊群低头吃草，白色羊毛与绿色草地相映成趣，微风拂过</p>
-                        <div><span class="tag">草原</span><span class="tag">放牧</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_03.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#3</span>
-                        <h3 class="news-title">🐕 牧羊犬巡逻</h3>
-                        <p class="news-summary">忠诚的边牧在羊群周围奔跑巡逻，黑白相间的毛发在阳光下闪亮</p>
-                        <div><span class="tag">牧羊犬</span><span class="tag">守护</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_04.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#4</span>
-                        <h3 class="news-title">🎵 牧歌悠扬</h3>
-                        <p class="news-summary">牧民骑马吹笛，悠扬的旋律飘荡在草原上，羊群安静聆听</p>
-                        <div><span class="tag">牧歌</span><span class="tag">笛声</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_05.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#5</span>
-                        <h3 class="news-title">🐑 羊羔嬉戏</h3>
-                        <p class="news-summary">小羊羔在草地上蹦跳玩耍，毛茸茸的身体像棉花球一样弹跳</p>
-                        <div><span class="tag">羊羔</span><span class="tag">嬉戏</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_06.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#6</span>
-                        <h3 class="news-title">🌅 夕阳归途</h3>
-                        <p class="news-summary">夕阳余晖洒满草原，牧民骑马赶着羊群回家，橙色天空美不胜收</p>
-                        <div><span class="tag">夕阳</span><span class="tag">归途</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_07.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#7</span>
-                        <h3 class="news-title">⛺ 毡房炊烟</h3>
-                        <p class="news-summary">草原蒙古包升起袅袅炊烟，女主人煮奶茶，羊群在旁休息</p>
-                        <div><span class="tag">毡房</span><span class="tag">烟火</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_08.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#8</span>
-                        <h3 class="news-title">🌊 羊群过河</h3>
-                        <p class="news-summary">牧民带领羊群渡过清澈溪流，羊蹄溅起水花，倒影映在水面</p>
-                        <div><span class="tag">过河</span><span class="tag">溪流</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_09.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#9</span>
-                        <h3 class="news-title">🏔️ 雪山牧场</h3>
-                        <p class="news-summary">远处雪山皑皑，脚下绿色牧场如毯，羊群像珍珠散落其间</p>
-                        <div><span class="tag">雪山</span><span class="tag">牧场</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_10.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#10</span>
-                        <h3 class="news-title">🌤️ 午后休憩</h3>
-                        <p class="news-summary">午后羊群在大树下休憩反刍，牧民倚树打盹，光影斑驳洒落</p>
-                        <div><span class="tag">休憩</span><span class="tag">午后</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_11.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#11</span>
-                        <h3 class="news-title">🐎 策马扬鞭</h3>
-                        <p class="news-summary">牧民纵马奔驰在辽阔草原上，衣袍迎风飘扬，英姿飒爽</p>
-                        <div><span class="tag">策马</span><span class="tag">奔驰</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_12.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#12</span>
-                        <h3 class="news-title">🌄 晨雾牧场</h3>
-                        <p class="news-summary">清晨薄雾笼罩草原，羊群在雾气中若隐若现如行云般缥缈</p>
-                        <div><span class="tag">晨雾</span><span class="tag">朦胧</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_13.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#13</span>
-                        <h3 class="news-title">🌺 花海牧羊</h3>
-                        <p class="news-summary">草原野花盛开五彩缤纷，羊群漫步花海中，牧女采摘野花</p>
-                        <div><span class="tag">花海</span><span class="tag">野花</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_14.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#14</span>
-                        <h3 class="news-title">🌧️ 雨后草原</h3>
-                        <p class="news-summary">雨后草原清新翠绿，彩虹横跨天际，羊群在彩虹下吃草</p>
-                        <div><span class="tag">雨后</span><span class="tag">彩虹</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_15.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#15</span>
-                        <h3 class="news-title">🏕️ 迁徙转场</h3>
-                        <p class="news-summary">牧民带领羊群迁徙转场，浩浩荡荡的队伍在草原上绵延不绝</p>
-                        <div><span class="tag">迁徙</span><span class="tag">转场</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_16.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#16</span>
-                        <h3 class="news-title">🐑 羊群剪毛</h3>
-                        <p class="news-summary">夏季剪羊毛时节，牧民熟练地剪下一团团羊毛，羊群安静等待</p>
-                        <div><span class="tag">剪毛</span><span class="tag">夏季</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_17.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#17</span>
-                        <h3 class="news-title">🌙 月夜羊圈</h3>
-                        <p class="news-summary">月光洒在羊圈中，羊群安然入睡，毡房透出温暖灯光，星空璀璨</p>
-                        <div><span class="tag">月夜</span><span class="tag">星空</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_18.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#18</span>
-                        <h3 class="news-title">🌊 草浪起伏</h3>
-                        <p class="news-summary">大风拂过草原掀起绿色波浪，羊群如帆船航行在绿色海洋中</p>
-                        <div><span class="tag">草浪</span><span class="tag">风</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_19.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#19</span>
-                        <h3 class="news-title">🐕 牧羊犬训练</h3>
-                        <p class="news-summary">牧民训练年轻边牧引导羊群，狗狗听从口哨指令精准穿梭</p>
-                        <div><span class="tag">训练</span><span class="tag">牧羊犬</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <video class="news-image" src="videos/video_20.mp4" autoplay muted loop playsinline></video>
-                    <div class="news-content">
-                        <span class="news-number">#20</span>
-                        <h3 class="news-title">🌄 草原日落</h3>
-                        <p class="news-summary">壮美草原日落，天空染成橙红紫色，牧民和羊群的剪影映在地平线上</p>
-                        <div><span class="tag">日落</span><span class="tag">剪影</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <section class="comments-section">
-            <h2 class="comments-title">💬 评论区</h2>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = window.location.href;
-                    this.page.identifier = window.location.pathname;
-                };
-                (function() {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://tom-xst9ggxnjx.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>请启用 JavaScript 以查看评论区</noscript>
-        </section>
-        <footer>
-            <p>🎬 视频生成与发布 by <a href="https://github.com/nickmccart/hn" target="_blank">Hermes Agent</a> | 图片生成 by <a href="https://build.nvidia.com/" target="_blank">NVIDIA AI</a></p>
-            <div class="footer-links">
-                <a href="index.html">首页</a> | <a href="about.html">关于</a> | <a href="contact.html">联系</a>
-            </div>
-            <p style="margin-top:10px;font-size:0.9em;">所有视频内容仅供参考，请以官方发布为准 · 2026年06月22日</p>
-        </footer>
-    </div>
-    <script>
-        function toggleTheme(){document.body.classList.toggle('dark-mode');localStorage.setItem('theme',document.body.classList.contains('dark-mode')?'dark':'light');}
-        const saved=localStorage.getItem('theme');if(saved==='dark')document.body.classList.add('dark-mode');
-        if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches&&!saved)document.body.classList.add('dark-mode');
-        function searchVideo(){const i=document.getElementById('searchInput').value.toLowerCase();document.querySelectorAll('.video-card').forEach(c=>{const t=c.querySelector('.news-title').textContent.toLowerCase(),s=c.querySelector('.news-summary').textContent.toLowerCase(),g=Array.from(c.querySelectorAll('.tag')).map(x=>x.textContent.toLowerCase()).join(' ');(t.includes(i)||s.includes(i)||g.includes(i))?c.classList.remove('hidden'):c.classList.add('hidden');});}
-        function toggleMute(){const v=document.getElementById('coverVideo'),b=document.getElementById('muteBtn');v.muted=!v.muted;b.textContent=v.muted?'🔇':'🔊';}
-    </script>
-</body>
-</html>
+     1|<!DOCTYPE html>
+     2|<html lang="zh-CN">
+     3|<head>
+     4|    <meta charset="UTF-8">
+     5|    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6|    <title>🏔️ 雪山风景 - AI视频专辑</title>
+     7|    <meta name="description" content="雪山·美丽风景视频专辑 - 2026年6月23日">
+     8|    <style>
+     9|        * { margin: 0; padding: 0; box-sizing: border-box; }
+    10|        :root {
+    11|            --bg-image: url('images/website-background-8k.png');
+    12|            --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #2d3a4a 100%);
+    13|            --container-bg: white; --text-color: #333;
+    14|            --card-bg: linear-gradient(145deg, #f0f4f8 0%, #ffffff 100%);
+    15|            --tag-bg: #e8f0fe; --tag-color: #1565c0;
+    16|            --warning-bg: #fff3cd; --warning-border: #ffc107; --warning-color: #856404;
+    17|            --footer-bg: #f0f4f8; --footer-color: #6c757d;
+    18|            --nav-bg: white; --nav-text: #333; --search-bg: #f8f9fa; --border-color: rgba(0,0,0,0.1);
+    19|        }
+    20|        .dark-mode {
+    21|            --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    22|            --container-bg: #1a1a2e; --text-color: #e0e0e0;
+    23|            --card-bg: linear-gradient(145deg, #2a3a4a 0%, #1f2f3f 100%);
+    24|            --tag-bg: #1a3a5a; --tag-color: #64b5f6;
+    25|            --warning-bg: #4a4732; --warning-border: #7c6d00; --warning-color: #d4c656;
+    26|            --footer-bg: #16213e; --footer-color: #a0a0a0;
+    27|            --nav-bg: #1f2f3f; --nav-text: #e0e0e0; --search-bg: #2a3a4a; --border-color: rgba(255,255,255,0.1);
+    28|        }
+    29|        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
+    30|        .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.88); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+    31|        .navbar { background: var(--nav-bg); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+    32|        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
+    33|        .nav-links { display: flex; gap: 20px; list-style: none; }
+    34|        .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
+    35|        .nav-links a:hover { color: #1565c0; }
+    36|        .theme-toggle { background: none; border: 2px solid var(--border-color); color: var(--nav-text); padding: 8px 16px; border-radius: 20px; cursor: pointer; }
+    37|        .theme-toggle:hover { background: var(--tag-bg); color: #1565c0; }
+    38|        .search-container { padding: 20px 30px; background: var(--nav-bg); border-bottom: 1px solid var(--border-color); }
+    39|        .search-box { width: 100%; padding: 12px 20px; border: 2px solid var(--border-color); border-radius: 25px; font-size: 1em; background: var(--search-bg); color: var(--text-color); }
+    40|        .search-box:focus { outline: none; border-color: #1565c0; box-shadow: 0 0 0 3px rgba(21,101,192,0.1); }
+    41|        header { background: var(--bg-gradient); color: white; padding: 50px 30px; text-align: center; position: relative; overflow: hidden; }
+    42|        @keyframes pulse { 0%,100%{transform:translate(-30%,-30%) scale(1);} 50%{transform:translate(-30%,-30%) scale(1.1);} }
+    43|        header::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle,rgba(255,255,255,0.1) 0%,transparent 70%); animation:pulse 3s ease-in-out infinite; }
+    44|        .cover-section { position:relative; width:100%; height:400px; margin-bottom:30px; border-radius:12px; overflow:hidden; box-shadow:0 8px 16px rgba(0,0,0,0.2); }
+    45|        .cover-image { width:100%; height:100%; object-fit:cover; }
+    46|        .cover-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(0,0,0,0.8),transparent); padding:40px 30px; color:white; opacity:0; transition:opacity .3s; }
+    47|        .cover-section:hover .cover-overlay { opacity:1; }
+    48|        .cover-title { font-size:3em; margin-bottom:10px; text-shadow:2px 2px 4px rgba(0,0,0,0.5); }
+    49|        .cover-subtitle { font-size:1.3em; opacity:0.9; }
+    50|        .mute-btn { position:absolute; top:15px; right:15px; background:rgba(0,0,0,0.5); border:none; border-radius:50%; width:40px; height:40px; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; z-index:10; }
+    51|        .mute-btn:hover { background:rgba(0,0,0,0.7); }
+    52|        @media(max-width:768px){.cover-section{height:300px;}.cover-title{font-size:2em;}.nav-links{display:none;}.news-grid{grid-template-columns:1fr;}}
+    53|        .content { padding: 40px 30px; }
+    54|        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-top: 40px; }
+    55|        @media (max-width: 768px) { .news-grid { grid-template-columns: 1fr; } h1 { font-size: 1.8em; } }
+    56|        .video-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--border-color); }
+    57|        .video-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+    58|        .video-card.hidden { display: none; }
+    59|        .news-image { width: 100%; height: 280px; object-fit: cover; display: block; cursor: pointer; transition: transform 0.3s; }
+    60|        .video-card:hover .news-image { transform: scale(1.05); }
+    61|        .news-image { cursor: pointer; }
+    62|        .news-content { padding: 20px; }
+    63|        .news-number { display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; font-weight: bold; margin-bottom: 12px; }
+    64|        .news-title { font-size: 1.4em; font-weight: bold; margin-bottom: 12px; color: var(--text-color); line-height: 1.4; }
+    65|        .news-summary { color: var(--text-color); opacity: 0.8; line-height: 1.7; font-size: 1em; }
+    66|        .tag { display: inline-block; padding: 5px 12px; margin: 8px 4px 0 0; background: var(--tag-bg); color: var(--tag-color); border-radius: 12px; font-size: 0.85em; font-weight: 500; }
+    67|        .warning { background: var(--warning-bg); border-left: 4px solid var(--warning-border); padding: 15px 20px; margin: 30px 0; border-radius: 4px; color: var(--warning-color); font-size: 0.95em; }
+    68|        footer { background: var(--footer-bg); padding: 30px; text-align: center; color: var(--footer-color); font-size: 0.95em; border-top: 2px solid var(--border-color); }
+    69|        footer a { color: #1565c0; text-decoration: none; font-weight: 500; }
+    70|        footer a:hover { text-decoration: underline; }
+    71|        .footer-links { margin-top: 15px; }
+    72|        .footer-links a { margin: 0 10px; color: var(--footer-color); }
+    73|        .comments-section { padding: 40px 30px; background: var(--container-bg); border-top: 2px solid var(--border-color); }
+    74|        .comments-title { font-size: 1.5em; font-weight: bold; margin-bottom: 20px; color: var(--text-color); }
+    75|    </style>
+    76|</head>
+    77|<body>
+    78|    <nav class="navbar">
+    79|        <a href="index.html" class="navbar-brand">🏔️ video</a>
+    80|        <ul class="nav-links">
+    81|            <li><a href="index.html">首页</a></li>
+    82|            <li><a href="about.html">关于</a></li>
+    83|            <li><a href="contact.html">联系</a></li>
+    84|            <li><a href="history.html">历史</a></li>
+    85|        </ul>
+    86|        <button class="theme-toggle" onclick="toggleTheme()">🌓 切换主题</button>
+    87|    </nav>
+    88|    <div class="container">
+    89|        <div class="content">
+    90|            <div class="cover-section">
+    91|                <video src="videos/cover.mp4" autoplay loop playsinline class="cover-image" id="coverVideo" onmouseover="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='1'" onmouseout="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='0'"></video>
+    92|                <button class="mute-btn" id="muteBtn" onclick="toggleMute()" title="开关声音">🔇</button>
+    93|                <div class="cover-overlay">
+    94|                    <p class="cover-subtitle">🏔️ 雪山风景 · 2026年6月23日</p>
+    95|                </div>
+    96|            </div>
+    97|
+    98|            <div class="news-grid" id="newsGrid">
+    99|
+   100|                <div class="video-card">
+   101|                    <video class="news-image" src="videos/video_01.mp4" autoplay muted loop playsinline></video>
+   102|                    <div class="news-content">
+   103|                        <span class="news-number">#1</span>
+   104|                        <h3 class="news-title">🌄 晨光牧羊</h3>
+   105|                        <p class="news-summary">清晨阳光洒在草原上，牧民身着蒙古袍打开栅栏，羊群如白云般涌出</p>
+   106|                        <div><span class="tag">晨光</span><span class="tag">羊群</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   107|                    </div>
+   108|                </div>
+   109|
+   110|                <div class="video-card">
+   111|                    <video class="news-image" src="videos/video_02.mp4" autoplay muted loop playsinline></video>
+   112|                    <div class="news-content">
+   113|                        <span class="news-number">#2</span>
+   114|                        <h3 class="news-title">🌿 羊群吃草</h3>
+   115|                        <p class="news-summary">广袤草原上羊群低头吃草，白色羊毛与绿色草地相映成趣，微风拂过</p>
+   116|                        <div><span class="tag">草原</span><span class="tag">放牧</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   117|                    </div>
+   118|                </div>
+   119|
+   120|                <div class="video-card">
+   121|                    <video class="news-image" src="videos/video_03.mp4" autoplay muted loop playsinline></video>
+   122|                    <div class="news-content">
+   123|                        <span class="news-number">#3</span>
+   124|                        <h3 class="news-title">🐕 牧羊犬巡逻</h3>
+   125|                        <p class="news-summary">忠诚的边牧在羊群周围奔跑巡逻，黑白相间的毛发在阳光下闪亮</p>
+   126|                        <div><span class="tag">牧羊犬</span><span class="tag">守护</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   127|                    </div>
+   128|                </div>
+   129|
+   130|                <div class="video-card">
+   131|                    <video class="news-image" src="videos/video_04.mp4" autoplay muted loop playsinline></video>
+   132|                    <div class="news-content">
+   133|                        <span class="news-number">#4</span>
+   134|                        <h3 class="news-title">🎵 牧歌悠扬</h3>
+   135|                        <p class="news-summary">牧民骑马吹笛，悠扬的旋律飘荡在草原上，羊群安静聆听</p>
+   136|                        <div><span class="tag">牧歌</span><span class="tag">笛声</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   137|                    </div>
+   138|                </div>
+   139|
+   140|                <div class="video-card">
+   141|                    <video class="news-image" src="videos/video_05.mp4" autoplay muted loop playsinline></video>
+   142|                    <div class="news-content">
+   143|                        <span class="news-number">#5</span>
+   144|                        <h3 class="news-title">🐑 羊羔嬉戏</h3>
+   145|                        <p class="news-summary">小羊羔在草地上蹦跳玩耍，毛茸茸的身体像棉花球一样弹跳</p>
+   146|                        <div><span class="tag">羊羔</span><span class="tag">嬉戏</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   147|                    </div>
+   148|                </div>
+   149|
+   150|                <div class="video-card">
+   151|                    <video class="news-image" src="videos/video_06.mp4" autoplay muted loop playsinline></video>
+   152|                    <div class="news-content">
+   153|                        <span class="news-number">#6</span>
+   154|                        <h3 class="news-title">🌅 夕阳归途</h3>
+   155|                        <p class="news-summary">夕阳余晖洒满草原，牧民骑马赶着羊群回家，橙色天空美不胜收</p>
+   156|                        <div><span class="tag">夕阳</span><span class="tag">归途</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   157|                    </div>
+   158|                </div>
+   159|
+   160|                <div class="video-card">
+   161|                    <video class="news-image" src="videos/video_07.mp4" autoplay muted loop playsinline></video>
+   162|                    <div class="news-content">
+   163|                        <span class="news-number">#7</span>
+   164|                        <h3 class="news-title">⛺ 毡房炊烟</h3>
+   165|                        <p class="news-summary">草原蒙古包升起袅袅炊烟，女主人煮奶茶，羊群在旁休息</p>
+   166|                        <div><span class="tag">毡房</span><span class="tag">烟火</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   167|                    </div>
+   168|                </div>
+   169|
+   170|                <div class="video-card">
+   171|                    <video class="news-image" src="videos/video_08.mp4" autoplay muted loop playsinline></video>
+   172|                    <div class="news-content">
+   173|                        <span class="news-number">#8</span>
+   174|                        <h3 class="news-title">🌊 羊群过河</h3>
+   175|                        <p class="news-summary">牧民带领羊群渡过清澈溪流，羊蹄溅起水花，倒影映在水面</p>
+   176|                        <div><span class="tag">过河</span><span class="tag">溪流</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   177|                    </div>
+   178|                </div>
+   179|
+   180|                <div class="video-card">
+   181|                    <video class="news-image" src="videos/video_09.mp4" autoplay muted loop playsinline></video>
+   182|                    <div class="news-content">
+   183|                        <span class="news-number">#9</span>
+   184|                        <h3 class="news-title">🏔️ 雪山牧场</h3>
+   185|                        <p class="news-summary">远处雪山皑皑，脚下绿色牧场如毯，羊群像珍珠散落其间</p>
+   186|                        <div><span class="tag">雪山</span><span class="tag">牧场</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   187|                    </div>
+   188|                </div>
+   189|
+   190|                <div class="video-card">
+   191|                    <video class="news-image" src="videos/video_10.mp4" autoplay muted loop playsinline></video>
+   192|                    <div class="news-content">
+   193|                        <span class="news-number">#10</span>
+   194|                        <h3 class="news-title">🌤️ 午后休憩</h3>
+   195|                        <p class="news-summary">午后羊群在大树下休憩反刍，牧民倚树打盹，光影斑驳洒落</p>
+   196|                        <div><span class="tag">休憩</span><span class="tag">午后</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   197|                    </div>
+   198|                </div>
+   199|
+   200|                <div class="video-card">
+   201|                    <video class="news-image" src="videos/video_11.mp4" autoplay muted loop playsinline></video>
+   202|                    <div class="news-content">
+   203|                        <span class="news-number">#11</span>
+   204|                        <h3 class="news-title">🐎 策马扬鞭</h3>
+   205|                        <p class="news-summary">牧民纵马奔驰在辽阔草原上，衣袍迎风飘扬，英姿飒爽</p>
+   206|                        <div><span class="tag">策马</span><span class="tag">奔驰</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   207|                    </div>
+   208|                </div>
+   209|
+   210|                <div class="video-card">
+   211|                    <video class="news-image" src="videos/video_12.mp4" autoplay muted loop playsinline></video>
+   212|                    <div class="news-content">
+   213|                        <span class="news-number">#12</span>
+   214|                        <h3 class="news-title">🌄 晨雾牧场</h3>
+   215|                        <p class="news-summary">清晨薄雾笼罩草原，羊群在雾气中若隐若现如行云般缥缈</p>
+   216|                        <div><span class="tag">晨雾</span><span class="tag">朦胧</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   217|                    </div>
+   218|                </div>
+   219|
+   220|                <div class="video-card">
+   221|                    <video class="news-image" src="videos/video_13.mp4" autoplay muted loop playsinline></video>
+   222|                    <div class="news-content">
+   223|                        <span class="news-number">#13</span>
+   224|                        <h3 class="news-title">🌺 花海牧羊</h3>
+   225|                        <p class="news-summary">草原野花盛开五彩缤纷，羊群漫步花海中，牧女采摘野花</p>
+   226|                        <div><span class="tag">花海</span><span class="tag">野花</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   227|                    </div>
+   228|                </div>
+   229|
+   230|                <div class="video-card">
+   231|                    <video class="news-image" src="videos/video_14.mp4" autoplay muted loop playsinline></video>
+   232|                    <div class="news-content">
+   233|                        <span class="news-number">#14</span>
+   234|                        <h3 class="news-title">🌧️ 雨后草原</h3>
+   235|                        <p class="news-summary">雨后草原清新翠绿，彩虹横跨天际，羊群在彩虹下吃草</p>
+   236|                        <div><span class="tag">雨后</span><span class="tag">彩虹</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   237|                    </div>
+   238|                </div>
+   239|
+   240|                <div class="video-card">
+   241|                    <video class="news-image" src="videos/video_15.mp4" autoplay muted loop playsinline></video>
+   242|                    <div class="news-content">
+   243|                        <span class="news-number">#15</span>
+   244|                        <h3 class="news-title">🏕️ 迁徙转场</h3>
+   245|                        <p class="news-summary">牧民带领羊群迁徙转场，浩浩荡荡的队伍在草原上绵延不绝</p>
+   246|                        <div><span class="tag">迁徙</span><span class="tag">转场</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   247|                    </div>
+   248|                </div>
+   249|
+   250|                <div class="video-card">
+   251|                    <video class="news-image" src="videos/video_16.mp4" autoplay muted loop playsinline></video>
+   252|                    <div class="news-content">
+   253|                        <span class="news-number">#16</span>
+   254|                        <h3 class="news-title">🐑 羊群剪毛</h3>
+   255|                        <p class="news-summary">夏季剪羊毛时节，牧民熟练地剪下一团团羊毛，羊群安静等待</p>
+   256|                        <div><span class="tag">剪毛</span><span class="tag">夏季</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   257|                    </div>
+   258|                </div>
+   259|
+   260|                <div class="video-card">
+   261|                    <video class="news-image" src="videos/video_17.mp4" autoplay muted loop playsinline></video>
+   262|                    <div class="news-content">
+   263|                        <span class="news-number">#17</span>
+   264|                        <h3 class="news-title">🌙 月夜羊圈</h3>
+   265|                        <p class="news-summary">月光洒在羊圈中，羊群安然入睡，毡房透出温暖灯光，星空璀璨</p>
+   266|                        <div><span class="tag">月夜</span><span class="tag">星空</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   267|                    </div>
+   268|                </div>
+   269|
+   270|                <div class="video-card">
+   271|                    <video class="news-image" src="videos/video_18.mp4" autoplay muted loop playsinline></video>
+   272|                    <div class="news-content">
+   273|                        <span class="news-number">#18</span>
+   274|                        <h3 class="news-title">🌊 草浪起伏</h3>
+   275|                        <p class="news-summary">大风拂过草原掀起绿色波浪，羊群如帆船航行在绿色海洋中</p>
+   276|                        <div><span class="tag">草浪</span><span class="tag">风</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   277|                    </div>
+   278|                </div>
+   279|
+   280|                <div class="video-card">
+   281|                    <video class="news-image" src="videos/video_19.mp4" autoplay muted loop playsinline></video>
+   282|                    <div class="news-content">
+   283|                        <span class="news-number">#19</span>
+   284|                        <h3 class="news-title">🐕 牧羊犬训练</h3>
+   285|                        <p class="news-summary">牧民训练年轻边牧引导羊群，狗狗听从口哨指令精准穿梭</p>
+   286|                        <div><span class="tag">训练</span><span class="tag">牧羊犬</span><span class="tag">4K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   287|                    </div>
+   288|                </div>
+   289|
+   290|                <div class="video-card">
+   291|                    <video class="news-image" src="videos/video_20.mp4" autoplay muted loop playsinline></video>
+   292|                    <div class="news-content">
+   293|                        <span class="news-number">#20</span>
+   294|                        <h3 class="news-title">🌄 草原日落</h3>
+   295|                        <p class="news-summary">壮美草原日落，天空染成橙红紫色，牧民和羊群的剪影映在地平线上</p>
+   296|                        <div><span class="tag">日落</span><span class="tag">剪影</span><span class="tag">8K</span><span class="tag" style="background:#fff3cd;color:#856404;">🔄 实时更新</span></div>
+   297|                    </div>
+   298|                </div>
+   299|
+   300|            </div>
+   301|        </div>
+   302|
+   303|        <section class="comments-section">
+   304|            <h2 class="comments-title">💬 评论区</h2>
+   305|            <div id="disqus_thread"></div>
+   306|            <script>
+   307|                var disqus_config = function () {
+   308|                    this.page.url = window.location.href;
+   309|                    this.page.identifier = window.location.pathname;
+   310|                };
+   311|                (function() {
+   312|                    var d = document, s = d.createElement('script');
+   313|                    s.src = 'https://tom-xst9ggxnjx.disqus.com/embed.js';
+   314|                    s.setAttribute('data-timestamp', +new Date());
+   315|                    (d.head || d.body).appendChild(s);
+   316|                })();
+   317|            </script>
+   318|            <noscript>请启用 JavaScript 以查看评论区</noscript>
+   319|        </section>
+   320|        <footer>
+   321|            <p>🎬 视频生成与发布 by <a href="https://github.com/nickmccart/hn" target="_blank">Hermes Agent</a> | 图片生成 by <a href="https://build.nvidia.com/" target="_blank">NVIDIA AI</a></p>
+   322|            <div class="footer-links">
+   323|                <a href="index.html">首页</a> | <a href="about.html">关于</a> | <a href="contact.html">联系</a>
+   324|            </div>
+   325|            <p style="margin-top:10px;font-size:0.9em;">所有视频内容仅供参考，请以官方发布为准 · 2026年06月23日</p>
+   326|        </footer>
+   327|    </div>
+   328|    <script>
+   329|        function toggleTheme(){document.body.classList.toggle('dark-mode');localStorage.setItem('theme',document.body.classList.contains('dark-mode')?'dark':'light');}
+   330|        const saved=localStorage.getItem('theme');if(saved==='dark')document.body.classList.add('dark-mode');
+   331|        if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches&&!saved)document.body.classList.add('dark-mode');
+   332|        function searchVideo(){const i=document.getElementById('searchInput').value.toLowerCase();document.querySelectorAll('.video-card').forEach(c=>{const t=c.querySelector('.news-title').textContent.toLowerCase(),s=c.querySelector('.news-summary').textContent.toLowerCase(),g=Array.from(c.querySelectorAll('.tag')).map(x=>x.textContent.toLowerCase()).join(' ');(t.includes(i)||s.includes(i)||g.includes(i))?c.classList.remove('hidden'):c.classList.add('hidden');});}
+   333|        function toggleMute(){const v=document.getElementById('coverVideo'),b=document.getElementById('muteBtn');v.muted=!v.muted;b.textContent=v.muted?'🔇':'🔊';}
+   334|    </script>
+   335|</body>
+   336|</html>
