@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>⚽ 世界杯集锦 — 7月3日1/16决赛</title>
-    <meta name="description" content="2026世界杯1/16决赛集锦：葡萄牙2-1克罗地亚、瑞士2-0阿尔及利亚">
+    <meta name="description" content="2026世界杯1/16决赛集锦：西班牙3-0奥地利、葡萄牙2-1克罗地亚、瑞士2-0阿尔及利亚">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -92,22 +92,35 @@
                 <input type="text" id="searchInput" class="search-box" placeholder="🔍 搜索比赛...（支持球队、标签、描述）" oninput="searchVideo()">
             </div>
             <div class="cover-section">
-                <video src="videos/worldcup3_01.mp4" autoplay loop playsinline class="cover-image" id="coverVideo" onmouseover="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='1'" onmouseout="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='0'"></video>
+                <video src="videos/worldcup3_03.mp4" autoplay loop playsinline class="cover-image" id="coverVideo" onmouseover="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='1'" onmouseout="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='0'"></video>
                 <button class="mute-btn" id="muteBtn" onclick="toggleMute()" title="开关声音">🔇</button>
                 <div class="cover-overlay">
                     <p class="cover-subtitle">⚽ 2026世界杯 · 1/16决赛集锦 · 2026年7月3日</p>
                 </div>
             </div>
 
-            <div class="warning">📅 2026世界杯1/16决赛 · 7月3日两场激战 · 来源：B站赛事集锦</div>
+            <div class="warning">📅 2026世界杯1/16决赛 · 7月3日三场激战 · 来源：B站赛事集锦</div>
 
             <div class="news-grid">
+            <div class="video-card">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/worldcup3_03.mp4" type="video/mp4">
+                </video>
+                <div class="video-card-info">
+                    <span class="news-number">01</span>
+                    <h3 class="news-title">🇪🇸 西班牙 3-0 奥地利</h3>
+                    <p class="news-summary">奥亚萨瓦尔双响+库库雷利亚两助攻，西班牙3-0碾压奥地利轻松晋级16强</p>
+                    <span class="tag">⭐ 奥亚萨瓦尔</span>
+                    <span class="tag">🇪🇸 西班牙</span>
+                    <span class="tag">🇦🇹 奥地利</span>
+                </div>
+            </div>
             <div class="video-card">
                 <video autoplay muted loop playsinline>
                     <source src="videos/worldcup3_01.mp4" type="video/mp4">
                 </video>
                 <div class="video-card-info">
-                    <span class="news-number">01</span>
+                    <span class="news-number">02</span>
                     <h3 class="news-title">🇵🇹 葡萄牙 2-1 克罗地亚</h3>
                     <p class="news-summary">C罗点球打入世界杯淘汰赛首球，拉莫斯补时绝杀，葡萄牙2-1逆转克罗地亚晋级16强</p>
                     <span class="tag">🔥 C罗</span>
@@ -120,7 +133,7 @@
                     <source src="videos/worldcup3_02.mp4" type="video/mp4">
                 </video>
                 <div class="video-card-info">
-                    <span class="news-number">02</span>
+                    <span class="news-number">03</span>
                     <h3 class="news-title">🇨🇭 瑞士 2-0 阿尔及利亚</h3>
                     <p class="news-summary">恩博洛和恩多耶各进一球，瑞士2-0轻取阿尔及利亚顺利晋级16强</p>
                     <span class="tag">⭐ 恩博洛</span>
