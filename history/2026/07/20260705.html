@@ -7,82 +7,75 @@
     <meta name="description" content="2026世界杯1/8决赛集锦：摩洛哥3-0加拿大、法国1-0巴拉圭">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg-gradient: linear-gradient(135deg, #1a3a4a 0%, #2d6a7a 100%);
-            --container-bg: white; --text-color: #333;
-            --footer-bg: #f0f6f8; --footer-color: #6c757d;
-            --nav-bg: white; --nav-text: #333; --border-color: rgba(0,0,0,0.1);
-        }
-        .dark-mode {
-            --bg-gradient: linear-gradient(135deg, #0a1a2a 0%, #1a3a4a 100%);
-            --container-bg: #0a1a2a; --text-color: #c0dae0;
-            --footer-bg: #0a1a2a; --footer-color: #8090a0;
-            --nav-bg: #1a2a3a; --nav-text: #c0dae0; --border-color: rgba(255,255,255,0.1);
-        }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: linear-gradient(135deg, #0d1b2a 0%, #1b3a4a 100%); min-height: 100vh; color: var(--text-color); }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .navbar { background: rgba(255,255,255,0.95); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); }
-        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
-        .nav-links { display: flex; gap: 20px; list-style: none; }
-        .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
-        .nav-links a:hover { color: #2d6a7a; }
-        .cover-section { position:relative; width:100%; height:500px; overflow:hidden; }
-        .cover-image { width:100%; height:100%; object-fit:cover; }
-        .cover-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(0,0,0,0.8),transparent); padding:60px 30px; color:white; }
-        .cover-title { font-size:3em; margin-bottom:10px; text-shadow:2px 2px 4px rgba(0,0,0,0.5); }
-        .cover-subtitle { font-size:1.3em; opacity:0.9; }
-        .content { padding: 40px 30px; background: var(--container-bg); border-radius: 0 0 16px 16px; }
-        .match-list { margin-top: 30px; }
-        .match-item { background: var(--container-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; margin-bottom: 20px; display: flex; align-items: center; gap: 30px; }
-        .match-info { flex: 1; }
-        .match-score { font-size: 2em; font-weight: bold; }
-        .match-detail { color: var(--footer-color); margin-top: 8px; }
-        @media(max-width:768px){.cover-section{height:300px;}.cover-title{font-size:2em;}.match-item{flex-direction:column;}.nav-links{display:none;}}
-        footer { background: var(--footer-bg); padding: 30px; text-align: center; color: var(--footer-color); border-radius: 0 0 16px 16px; }
-        footer a { color: #2d6a7a; text-decoration: none; }
+        :root { --bg: #0d1b2a; --card-bg: #1b2a3a; --text: #e0e0e0; --tag-bg: #2a3a4a; --tag-color: #4a9aaa; --accent: #2d6a7a; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+        .navbar { background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+        .navbar-brand { font-size: 1.3em; font-weight: bold; color: #fff; text-decoration: none; }
+        .nav-links { display: flex; gap: 16px; list-style: none; }
+        .nav-links a { color: #ccc; text-decoration: none; font-size: 0.9em; }
+        .nav-links a:hover { color: #fff; }
+        .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+        .cover-card { background: linear-gradient(135deg, #1a3a4a, #0d1b2a); border-radius: 16px; padding: 60px 30px; text-align: center; margin-bottom: 30px; }
+        .cover-title { font-size: 2.2em; margin-bottom: 10px; }
+        .cover-subtitle { font-size: 1.1em; opacity: 0.8; }
+        .date-badge { display: inline-block; background: var(--accent); color: #fff; padding: 6px 18px; border-radius: 20px; font-size: 0.85em; margin-top: 15px; }
+        .video-grid { display: grid; gap: 24px; margin-top: 20px; }
+        .video-card { background: var(--card-bg); border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+        .video-card video { width: 100%; height: auto; max-height: 400px; display: block; background: #000; }
+        .video-info { padding: 18px 20px; }
+        .video-number { display: inline-block; background: var(--accent); color: #fff; padding: 3px 12px; border-radius: 12px; font-size: 0.8em; margin-bottom: 8px; }
+        .video-title { font-size: 1.2em; font-weight: bold; margin-bottom: 6px; }
+        .video-desc { opacity: 0.7; font-size: 0.9em; }
+        .tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); padding: 3px 10px; border-radius: 10px; font-size: 0.8em; margin-right: 5px; }
+        .back-link { display: inline-block; margin-top: 20px; color: var(--accent); text-decoration: none; font-size: 0.9em; }
+        footer { text-align: center; padding: 30px; opacity: 0.5; font-size: 0.85em; }
+        @media(max-width:600px){.cover-title{font-size:1.6em;}.navbar{flex-wrap:wrap;gap:10px;}.nav-links{display:none;}}
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/video/index.html" class="navbar-brand">⚽ 世界杯集锦</a>
-        <ul class="nav-links">
-            <li><a href="/video/index.html">首页</a></li>
-            <li><a href="/video/about.html">关于</a></li>
-            <li><a href="/video/contact.html">联系</a></li>
-            <li><a href="/video/history.html">历史</a></li>
-        </ul>
-    </nav>
-    <div class="cover-section">
-        <video src="../../../videos/worldcup5_01.mp4" autoplay loop playsinline class="cover-image"></video>
-        <div class="cover-overlay">
-            <p class="cover-title">⚽ 7月5日 · 1/8决赛</p>
-            <p class="cover-subtitle">摩洛哥3-0加拿大 · 法国1-0巴拉圭</p>
-        </div>
+<nav class="navbar">
+    <a href="/video/index.html" class="navbar-brand">⚽ 世界杯集锦</a>
+    <ul class="nav-links">
+        <li><a href="/video/index.html">首页</a></li>
+        <li><a href="/video/history.html">历史</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="cover-card">
+        <div class="cover-title">⚽ 2026世界杯 · 7月5日</div>
+        <div class="cover-subtitle">1/8决赛两场集锦</div>
+        <div class="date-badge">📅 2026年7月5日</div>
     </div>
-    <div class="container">
-        <div class="content">
-            <h2>📋 当日赛果</h2>
-            <div class="match-list">
-                <div class="match-item">
-                    <div style="font-size:3em;">🇲🇦 🇨🇦</div>
-                    <div class="match-info">
-                        <div class="match-score">摩洛哥 3 - 0 加拿大</div>
-                        <div class="match-detail">⏱ 01:00 · 乌纳希双响+阿什拉夫两助攻 · 摩洛哥3-0横扫晋级八强</div>
-                    </div>
-                </div>
-                <div class="match-item">
-                    <div style="font-size:3em;">🇫🇷 🇵🇾</div>
-                    <div class="match-info">
-                        <div class="match-score">法国 1 - 0 巴拉圭</div>
-                        <div class="match-detail">⏱ 05:00 · 姆巴佩点射制胜（5场7球） · 法国1-0险胜晋级八强</div>
-                    </div>
-                </div>
+
+    <div class="video-grid">
+        <div class="video-card">
+            <video controls preload="metadata">
+                <source src="../../../videos/worldcup5_01.mp4" type="video/mp4">
+            </video>
+            <div class="video-info">
+                <span class="video-number">01</span>
+                <div class="video-title">🇲🇦 摩洛哥 3-0 加拿大</div>
+                <div class="video-desc">乌纳希贴地斩+抽射双响，阿什拉夫两助攻，摩洛哥3-0横扫晋级八强</div>
+                <span class="tag">⭐ 乌纳希双响</span><span class="tag">🇲🇦 摩洛哥</span><span class="tag">🇨🇦 加拿大</span>
+            </div>
+        </div>
+        <div class="video-card">
+            <video controls preload="metadata">
+                <source src="../../../videos/worldcup5_02.mp4" type="video/mp4">
+            </video>
+            <div class="video-info">
+                <span class="video-number">02</span>
+                <div class="video-title">🇫🇷 法国 1-0 巴拉圭</div>
+                <div class="video-desc">姆巴佩点射破门（5场7球领跑射手榜），法国1-0险胜晋级八强</div>
+                <span class="tag">⭐ 姆巴佩</span><span class="tag">🇫🇷 法国</span><span class="tag">🇵🇾 巴拉圭</span>
             </div>
         </div>
     </div>
-    <footer>
-        <p>⚽ 2026世界杯集锦 | 视频来源：B站赛事集锦 | <a href="/video/index.html">返回首页</a></p>
-        <p style="margin-top:10px;">所有视频内容仅供参考 · 2026年7月5日</p>
-    </footer>
+
+    <a href="/video/history/2026/07/" class="back-link">← 返回7月存档</a>
+</div>
+<footer>
+    <p>⚽ 2026世界杯集锦 | <a href="/video/index.html">返回首页</a></p>
+</footer>
 </body>
 </html>
