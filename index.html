@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚽ 世界杯集锦 — 7月7日1/8决赛</title>
-    <meta name="description" content="2026世界杯1/8决赛集锦：🇪🇸西班牙1-0淘汰🇵🇹葡萄牙（梅里诺91分钟绝杀）+ 🇺🇸美国1-4🇧🇪比利时">
+    <meta name="description" content="2026世界杯1/8决赛：🇦🇷阿根廷2-1埃及 + 🇨🇭瑞士2-0哥伦比亚全场录像">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,14 +33,13 @@
         .nav-links { display: flex; gap: 20px; list-style: none; }
         .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
         .nav-links a:hover { color: #2d6a7a; }
-        .theme-toggle { background: none; border: 2px solid var(--border-color); color: var(--nav-text); padding: 8px 16px; border-radius: 20px; cursor: pointer; }
-        .theme-toggle:hover { background: var(--tag-bg); color: #2d6a7a; }
-        .search-container { padding: 20px 30px; background: var(--nav-bg); border-bottom: 1px solid var(--border-color); }
-        .search-box { width: 100%; padding: 12px 20px; border: 2px solid var(--border-color); border-radius: 25px; font-size: 1em; background: var(--search-bg); color: var(--text-color); }
-        .search-box:focus { outline: none; border-color: #2d6a7a; box-shadow: 0 0 0 3px rgba(45,106,122,0.1); }
-        header { background: var(--bg-gradient); color: white; padding: 50px 30px; text-align: center; position: relative; overflow: hidden; }
-        .cover-section { position:relative; width:100%; height:400px; margin-bottom:30px; border-radius:12px; overflow:hidden; box-shadow:0 8px 16px rgba(0,0,0,0.2); }
-        .cover-image { width:100%; height:100%; object-fit:cover; }
+        .theme-toggle { background: none; border: 2px solid var(--border-color); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.9em; color: var(--nav-text); }
+        .theme-toggle:hover { background: var(--search-bg); }
+        .search-container { padding: 15px 30px; background: var(--search-bg); border-bottom: 1px solid var(--border-color); }
+        .search-box { width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 25px; font-size: 1em; background: var(--container-bg); color: var(--text-color); }
+        .search-box:focus { outline: none; border-color: #2d6a7a; }
+        .cover-section { position: relative; height: 500px; overflow: hidden; cursor: pointer; }
+        .cover-image { width: 100%; height: 100%; object-fit: cover; display: block; }
         .cover-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(0,0,0,0.8),transparent); padding:40px 30px; color:white; opacity:0; transition:opacity .3s; }
         .cover-section:hover .cover-overlay { opacity:1; }
         .cover-title { font-size:3em; margin-bottom:10px; text-shadow:2px 2px 4px rgba(0,0,0,0.5); }
@@ -85,291 +83,97 @@
                 <input type="text" id="searchInput" class="search-box" placeholder="🔍 搜索比赛...（支持球队、标签、描述）" oninput="searchVideo()">
             </div>
             <div class="cover-section">
-                <video src="videos/worldcup7_01.mp4" autoplay loop playsinline class="cover-image" id="coverVideo" onmouseover="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='1'" onmouseout="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='0'"></video>
+                <video src="videos/worldcup8_01.mp4" autoplay loop playsinline class="cover-image" id="coverVideo" onmouseover="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='1'" onmouseout="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='0'"></video>
                 <button class="mute-btn" id="muteBtn" onclick="toggleMute()" title="开关声音">🔇</button>
                 <div class="cover-overlay">
-                    <p class="cover-subtitle">⚽ 2026世界杯 · 1/8决赛集锦 · 2026年7月7日</p>
+                    <h1 class="cover-title">🇦🇷阿根廷 2-1 埃及</h1>
+                    <p class="cover-subtitle">⚽ 2026世界杯 · 1/8决赛 · 2026年7月8日</p>
                 </div>
             </div>
 
-            <div class="warning">📅 2026世界杯1/8决赛 · 7月7日两场激战 · 🇪🇸西班牙1-0葡萄牙（梅里诺91分钟绝杀）+ 🇺🇸美国1-4比利时</div>
+            <div class="warning">📅 2026世界杯1/8决赛 · 7月8日 · 🇦🇷阿根廷2-1埃及 + 🇨🇭瑞士2-0哥伦比亚（全场录像，67+44段）</div>
 
             <div class="news-grid">
-            <!-- 🇪🇸 西班牙 vs 🇵🇹 葡萄牙 (10段) -->
-            <div class="video-card">
+            <!-- 🇦🇷 阿根廷 vs 🇪🇬 埃及 (67段) -->
+            <div class="video-card" onclick="location.href='history/2026/07/20260708.html'">
                 <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_01.mp4" type="video/mp4">
+                    <source src="videos/worldcup8_01.mp4" type="video/mp4">
                 </video>
                 <div class="video-card-info">
                     <span class="news-number">01</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">梅里诺91分钟头球绝杀！C罗最后一舞落幕，西班牙晋级8强</p>
-                    <span class="tag">⭐ 梅里诺绝杀</span>
-                    <span class="tag">🇪🇸 西班牙</span>
+                    <h3 class="news-title">🇦🇷 阿根廷 2-1 🇪🇬 埃及</h3>
+                    <p class="news-summary">全场录像 · 67段 · 约132分钟 · 晋级8强！</p>
+                    <span class="tag">⭐ 完整全场</span>
+                    <span class="tag">🇦🇷 阿根廷</span>
+                    <span class="tag">🇪🇬 埃及</span>
                 </div>
             </div>
-            <div class="video-card">
+            <!-- 🇨🇭 瑞士 vs 🇨🇴 哥伦比亚 (44段) -->
+            <div class="video-card" onclick="location.href='history/2026/07/20260708.html'">
                 <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_02.mp4" type="video/mp4">
+                    <source src="videos/worldcup8_68.mp4" type="video/mp4">
                 </video>
                 <div class="video-card-info">
-                    <span class="news-number">02</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">C罗告别世界杯！41岁传奇结束第五次世界杯之旅</p>
-                    <span class="tag">⭐ C罗最后一舞</span>
-                    <span class="tag">🇵🇹 葡萄牙</span>
+                    <span class="news-number">68</span>
+                    <h3 class="news-title">🇨🇭 瑞士 2-0 🇨🇴 哥伦比亚</h3>
+                    <p class="news-summary">全场录像 · 44段 · 约175分钟 · 晋级8强！</p>
+                    <span class="tag">⭐ 完整全场</span>
+                    <span class="tag">🇨🇭 瑞士</span>
+                    <span class="tag">🇨🇴 哥伦比亚</span>
                 </div>
             </div>
+            <!-- 占位卡 -->
             <div class="video-card">
                 <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_03.mp4" type="video/mp4">
+                    <source src="videos/worldcup8_01.mp4" type="video/mp4">
                 </video>
                 <div class="video-card-info">
-                    <span class="news-number">03</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">西班牙防守稳固，葡萄牙进攻屡屡受挫</p>
-                    <span class="tag">🇪🇸 西班牙防守</span>
-                    <span class="tag">🇵🇹 葡萄牙</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_04.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">04</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">姆巴佩拉明·亚马尔vsC罗，新老天王对决</p>
-                    <span class="tag">⭐ 新老对决</span>
-                    <span class="tag">🇪🇸 西班牙</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_05.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">05</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">西班牙1-0淘汰葡萄牙，挺进世界杯8强</p>
-                    <span class="tag">⭐ 西班牙晋级</span>
-                    <span class="tag">🇪🇸 西班牙</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_06.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">06</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">比赛后半段，西班牙保持领先优势</p>
-                    <span class="tag">🇪🇸 西班牙</span>
-                    <span class="tag">🇵🇹 葡萄牙</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_07.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">07</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">C罗最后一次代表葡萄牙出战世界杯</p>
-                    <span class="tag">⭐ C罗告别</span>
-                    <span class="tag">🇵🇹 葡萄牙</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_08.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">08</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">全场集锦回顾，西班牙1-0绝杀葡萄牙</p>
-                    <span class="tag">⭐ 全场集锦</span>
-                    <span class="tag">🇪🇸 西班牙</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_09.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">09</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">补时阶段，梅里诺头球破门完成绝杀</p>
-                    <span class="tag">⭐ 梅里诺头球</span>
-                    <span class="tag">🇪🇸 西班牙</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_10.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">10</span>
-                    <h3 class="news-title">🇪🇸 西班牙 1-0 🇵🇹 葡萄牙</h3>
-                    <p class="news-summary">赛后采访与庆祝，西班牙晋级8强</p>
-                    <span class="tag">⭐ 西班牙庆祝</span>
-                    <span class="tag">🇪🇸 西班牙</span>
-                </div>
-            </div>
-            <!-- 🇺🇸 美国 vs 🇧🇪 比利时 (10段) -->
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_11.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">11</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">特朗普遗憾！美国1-4比利时，特朗普观战表情凝重</p>
-                    <span class="tag">⭐ 比利时大胜</span>
-                    <span class="tag">🇧🇪 比利时</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_12.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">12</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">比利时进攻火力全开，美国防线告急</p>
-                    <span class="tag">🇧🇪 比利时进攻</span>
-                    <span class="tag">🇺🇸 美国</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_13.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">13</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">美国队打进一球，1-4落后比利时</p>
-                    <span class="tag">🇺🇸 美国进球</span>
-                    <span class="tag">🇺🇸 美国</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_14.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">14</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">比利时多点开花，4-1大胜美国晋级</p>
-                    <span class="tag">⭐ 比利时晋级</span>
-                    <span class="tag">🇧🇪 比利时</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_15.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">15</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">比利时队精彩配合，打入第三球</p>
-                    <span class="tag">🇧🇪 比利时</span>
-                    <span class="tag">⭐ 精彩配合</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_16.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">16</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">美国队普利希奇领衔进攻，多次威胁比利时球门</p>
-                    <span class="tag">🇺🇸 普利希奇</span>
-                    <span class="tag">🇺🇸 美国</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_17.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">17</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">比利时4-1大胜美国，晋级世界杯8强</p>
-                    <span class="tag">⭐ 比利时大胜</span>
-                    <span class="tag">🇧🇪 比利时</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_18.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">18</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">比利时队德布劳内世界波破门</p>
-                    <span class="tag">⭐ 德布劳内</span>
-                    <span class="tag">🇧🇪 比利时</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_19.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">19</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">美国队普利希奇任意球破门，1-4</p>
-                    <span class="tag">⭐ 普利希奇</span>
-                    <span class="tag">🇺🇸 美国</span>
-                </div>
-            </div>
-            <div class="video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup7_20.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">20</span>
-                    <h3 class="news-title">🇺🇸 美国 1-4 🇧🇪 比利时</h3>
-                    <p class="news-summary">赛后总结，比利时4-1大胜美国晋级8强</p>
-                    <span class="tag">⭐ 比利时晋级</span>
-                    <span class="tag">🇧🇪 比利时</span>
+                    <span class="news-number">⚽</span>
+                    <h3 class="news-title">更多比赛陆续更新中</h3>
+                    <p class="news-summary">1/8决赛精彩继续，敬请期待！</p>
+                    <span class="tag">赛程：7月9日-10日</span>
+                    <span class="tag">荷兰vs罗马尼亚</span>
+                    <span class="tag">法国vs爱尔兰</span>
                 </div>
             </div>
             </div>
 
-            <section class="comments-section">
-            <h2 class="comments-title">💬 评论区</h2>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = window.location.href;
-                    this.page.identifier = window.location.pathname;
-                };
-                (function() {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://tom-xst9ggxnjx.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>请启用 JavaScript 以查看评论区</noscript>
-        </section>
-        <footer>
-            <p>⚽ 2026世界杯集锦 by <a href="https://github.com/nickmccart/hn" target="_blank">Hermes Agent</a> | 视频来源：B站</p>
-            <div class="footer-links">
-                <a href="index.html">首页</a> | <a href="about.html">关于</a> | <a href="contact.html">联系</a>
+            <div class="comments-section">
+                <h2 class="comments-title">📺 观看说明</h2>
+                <p>所有视频均为B站世界杯全场录像，每个视频约2-5分钟，点击卡片即可观看。<br>
+                共收录：阿根廷vs埃及（67段）+ 瑞士vs哥伦比亚（44段），全部支持浏览器直接播放。</p>
             </div>
-            <p style="margin-top:10px;font-size:0.9em;">所有视频内容仅供参考 · 2026年7月7日</p>
-        </footer>
+        </div>
     </div>
+
     <script>
-        function toggleTheme(){document.body.classList.toggle('dark-mode');localStorage.setItem('theme',document.body.classList.contains('dark-mode')?'dark':'light');}
-        const saved=localStorage.getItem('theme');if(saved==='dark')document.body.classList.add('dark-mode');
-        if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches&&!saved)document.body.classList.add('dark-mode');
-        function searchVideo(){const i=document.getElementById('searchInput').value.toLowerCase();document.querySelectorAll('.video-card').forEach(c=>{const t=c.querySelector('.news-title').textContent.toLowerCase(),s=c.querySelector('.news-summary').textContent.toLowerCase(),g=Array.from(c.querySelectorAll('.tag')).map(x=>x.textContent.toLowerCase()).join(' ');(t.includes(i)||s.includes(i)||g.includes(i))?c.classList.remove('hidden'):c.classList.add('hidden');});}
-        function toggleMute(){const v=document.getElementById('coverVideo'),b=document.getElementById('muteBtn');v.muted=!v.muted;b.textContent=v.muted?'🔇':'🔊';}
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+        function toggleMute() {
+            const v = document.getElementById('coverVideo');
+            v.muted = !v.muted;
+            document.getElementById('muteBtn').textContent = v.muted ? '🔇' : '🔊';
+        }
+        function searchVideo() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            document.querySelectorAll('.video-card').forEach(c => {
+                const t = c.querySelector('.news-title').textContent.toLowerCase() +
+                          c.querySelector('.news-summary').textContent.toLowerCase();
+                c.classList.toggle('hidden', q.length > 0 && !t.includes(q));
+            });
+        }
+        if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
     </script>
+
+    <footer>
+        <p>© 2026 世界杯视频集锦 · 仅供学习交流</p>
+        <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="history.html">历史</a>
+            <a href="about.html">关于</a>
+        </div>
+    </footer>
 </body>
 </html>
