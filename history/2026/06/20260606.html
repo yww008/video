@@ -3,127 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚽ 2026世界杯 — 6月6日 1/8决赛</title>
-    <meta name="description" content="2026世界杯1/8决赛：🇧🇷巴西1-2🇳🇴挪威 + 🇲🇽墨西哥2-3🏴󠁧󠁢󠁥󠁮󠁧󠁿英格兰 | CCTV原声短集锦(无主播解说)">
-
+    <title>🐎 万马奔腾 - 历史归档</title>
+    <meta name="description" content="AI生成万马奔腾主题视频专辑 - 2026年6月6日">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --bg-image: url('../../../images/website-background-8k.png');
-            --container-bg: white; --text-color: #333;
-            --card-bg: linear-gradient(145deg, #e8f4f8 0%, #ffffff 100%);
-            --tag-bg: #d4e8f0; --tag-color: #1a6a7a;
-            --footer-bg: #f0f6f8; --footer-color: #6c757d;
-            --nav-bg: white; --nav-text: #333; --search-bg: #f8f9fa; --border-color: rgba(0,0,0,0.1);
+            --bg-image: url('/video/images/website-background-8k.png');
+            --container-bg: rgba(255,255,255,0.92);
+            --text-color: #1a1a1a;
+            --footer-bg: rgba(255,255,255,0.9); --footer-color: #666;
+            --nav-bg: rgba(255,255,255,0.95); --nav-text: #1a1a1a; --border-color: rgba(0,0,0,0.1);
         }
         .dark-mode {
-            --container-bg: #0a1a2a; --text-color: #c0dae0;
-            --card-bg: linear-gradient(145deg, #1a2a3a 0%, #0a1a2a 100%);
-            --tag-bg: #2a3a4a; --tag-color: #4a9aaa;
-            --footer-bg: #0a1a2a; --footer-color: #8090a0;
-            --nav-bg: #1a2a3a; --nav-text: #c0dae0; --search-bg: #1a2a3a; --border-color: rgba(255,255,255,0.1);
+            --bg-image: url('/video/images/website-background-8k.png');
+            --container-bg: rgba(20,20,40,0.92);
+            --text-color: #e0e0e0;
+            --footer-bg: rgba(20,20,40,0.9); --footer-color: #aaa;
+            --nav-bg: rgba(30,30,60,0.95); --nav-text: #e0e0e0; --border-color: rgba(255,255,255,0.1);
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
-        .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.88); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; backdrop-filter: blur(10px); }
-        .navbar { background: var(--nav-bg); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; border-radius: 16px; overflow: hidden; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); }
         .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
         .nav-links { display: flex; gap: 20px; list-style: none; }
         .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
-        .theme-toggle { background: none; border: 2px solid var(--border-color); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.9em; color: var(--nav-text); }
-        .search-container { padding: 15px 30px; background: var(--search-bg); border-bottom: 1px solid var(--border-color); }
-        .search-box { width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 25px; font-size: 1em; background: var(--container-bg); color: var(--text-color); }
-        .search-box:focus { outline: none; border-color: #2d6a7a; }
-        .banner { background: linear-gradient(135deg, #1a5a7a, #2d6a7a); color: white; padding: 30px; text-align: center; }
-        .banner h1 { font-size: 2em; margin-bottom: 10px; }
-        .banner p { opacity: 0.9; font-size: 1.1em; }
-        .section-title { font-size: 1.3em; margin: 25px 30px 15px; color: var(--text-color); border-left: 4px solid #2d6a7a; padding-left: 12px; }
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 0 30px 30px; }
-        .video-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
-        .video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
-        .video-card video { width: 100%; height: 200px; object-fit: cover; display: block; }
-        .video-card-info { padding: 15px; }
-        .news-number { background: #2d6a7a; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 8px; }
-        .news-title { font-size: 1.1em; margin: 8px 0; color: var(--text-color); }
-        .news-summary { color: #666; font-size: 0.9em; margin-bottom: 10px; }
-        .tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); padding: 4px 10px; border-radius: 15px; font-size: 0.8em; margin-right: 5px; margin-bottom: 5px; }
-        footer { background: var(--footer-bg); color: var(--footer-color); padding: 30px; text-align: center; margin-top: 30px; }
-        footer a { color: #2d6a7a; }
-        .footer-links { margin-top: 10px; }
-        .footer-links a { color: var(--footer-color); margin: 0 10px; }
-        @media(max-width:768px){.nav-links{display:none;}.news-grid{grid-template-columns:1fr;}}
+        .nav-links a:hover { color: #e65100; }
+        .theme-toggle { background: none; border: 2px solid var(--border-color); color: var(--nav-text); padding: 8px 16px; border-radius: 20px; cursor: pointer; }
+        .theme-toggle:hover { background: #fff3e0; color: #e65100; }
+        .cover-section { position: relative; width: 100%; height: 500px; margin: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        .cover-section video { width: 100%; height: 100%; object-fit: cover; background: #000; }
+        .cover-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 50px 30px 30px; color: white; }
+        .cover-subtitle { font-size: 1.8em; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
+        .mute-btn { position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.5); border: none; border-radius: 50%; width: 44px; height: 44px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; z-index: 10; }
+        .mute-btn:hover { background: rgba(0,0,0,0.75); }
+        footer { background: var(--footer-bg); color: var(--footer-color); text-align: center; padding: 30px; border-top: 1px solid var(--border-color); }
+        footer a { color: #e65100; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links { margin-top: 12px; }
+        .footer-links a { margin: 0 10px; color: var(--footer-color); }
+        @media (max-width: 768px) { .cover-section { height: 300px; } .cover-subtitle { font-size: 1.3em; } .nav-links { display: none; } }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="../../../index.html" class="navbar-brand">⚽ 世界杯集锦</a>
-        <ul class="nav-links">
-            <li><a href="../../../index.html">首页</a></li>
-            <li><a href="../../../about.html">关于</a></li>
-            <li><a href="../../../contact.html">联系</a></li>
-            <li><a href="../../../history.html">历史</a></li>
-        </ul>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 切换主题</button>
-    </nav>
     <div class="container">
-        <div class="banner">
-            <h1>⚽ 2026世界杯 1/8决赛 · 6月6日</h1>
-            <p>🇧🇷 巴西 1-2 🇳🇴 挪威 &nbsp;|&nbsp; 🇲🇽 墨西哥 2-3 🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰 &nbsp;|&nbsp; CCTV原声集锦（无主播解说）</p>
-        </div>
+        <nav class="navbar">
+            <a href="/video/index.html" class="navbar-brand">🐎 video</a>
+            <ul class="nav-links">
+                <li><a href="/video/index.html">首页</a></li>
+                <li><a href="/video/about.html">关于</a></li>
+                <li><a href="/video/contact.html">联系</a></li>
+                <li><a href="/video/history.html">历史</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </nav>
 
-        <h2 class="section-title">🇧🇷 巴西 vs 🇳🇴 挪威（1:2）· 14个短片段</h2>
-        <div class="news-grid">
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_01.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">01</span><h3 class="news-title">[世界杯]哈兰德：这是挪威足球历史上最疯狂的一天</h3><p class="news-summary">🇳🇴 哈兰德赛后采访，称这是挪足历史性时刻</p><span class="tag">⭐ 采访</span><span class="tag">无解说</span><span class="tag">🇳🇴 挪威</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_02.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">02</span><h3 class="news-title">[世界杯]越位在先 挪威队开场三分钟进球无效</h3><p class="news-summary">🇧🇷 挪威开场进球越位在先，被判无效</p><span class="tag">⚽ 越位</span><span class="tag">无解说</span><span class="tag">🇳🇴 挪威</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_03.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">03</span><h3 class="news-title">[世界杯]巴西队获得点球 内马尔主罚扳回一城</h3><p class="news-summary">🇧🇷 内马尔点球破门，巴西1-2落后</p><span class="tag">⚽ 点球</span><span class="tag">无解说</span><span class="tag">🇧🇷 巴西</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_04.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">04</span><h3 class="news-title">[世界杯]1/8决赛：巴西1-2挪威 哈兰德集锦</h3><p class="news-summary">🇳🇴 哈兰德独中两元，挪威爆冷淘汰巴西</p><span class="tag">⭐ 集锦</span><span class="tag">无解说</span><span class="tag">🇳🇴 挪威</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_05.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">05</span><h3 class="news-title">[世界杯]马基尼奥斯：全新周期开启 未来尚且未知</h3><p class="news-summary">🇧🇷 巴西队长马基尼奥斯赛后采访</p><span class="tag">⭐ 采访</span><span class="tag">无解说</span><span class="tag">🇧🇷 巴西</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_06.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">06</span><h3 class="news-title">[世界杯]刘旭：哈兰德独中两元成本场最佳球员</h3><p class="news-summary">🇳🇴 哈兰德本场最佳，两粒进球助挪威晋级</p><span class="tag">⭐ 球员</span><span class="tag">无解说</span><span class="tag">🇳🇴 挪威</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_07.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">07</span><h3 class="news-title">[世界杯]哈兰德梅开二度 挪威锁定胜局</h3><p class="news-summary">🇳🇴 哈兰德第二球，挪威2-0领先</p><span class="tag">⚽ 进球</span><span class="tag">无解说</span><span class="tag">🇳🇴 挪威</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_08.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">08</span><h3 class="news-title">[世界杯]维尼修斯反击送妙传 恩德里克错失单刀</h3><p class="news-summary">🇧🇷 恩德里克错失绝佳机会</p><span class="tag">⚽ 错失</span><span class="tag">无解说</span><span class="tag">🇧🇷 巴西</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_09.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">09</span><h3 class="news-title">[世界杯]1/8决赛：巴西1-2挪威 维尼修斯集锦</h3><p class="news-summary">🇧🇷 维尼修斯全场表现集锦</p><span class="tag">⭐ 集锦</span><span class="tag">无解说</span><span class="tag">🇧🇷 巴西</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_10.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">10</span><h3 class="news-title">[世界杯]哈兰德头球破门 助挪威队打破僵局</h3><p class="news-summary">🇳🇴 哈兰德头球破门，挪威1-0领先</p><span class="tag">⚽ 进球</span><span class="tag">无解说</span><span class="tag">🇳🇴 挪威</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_11.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">11</span><h3 class="news-title">[世界杯]库尼亚突破造点 吉马良斯主罚被扑</h3><p class="news-summary">🇧🇷 巴西造点，但点球被门将扑出</p><span class="tag">⚽ 点球</span><span class="tag">无解说</span><span class="tag">🇧🇷 巴西</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_12.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">12</span><h3 class="news-title">[世界杯]哈兰德垫射攻门 阿利松将球没收</h3><p class="news-summary">🇳🇴 哈兰德射门被阿利松化解</p><span class="tag">⚽ 扑救</span><span class="tag">无解说</span><span class="tag">🇳🇴 挪威</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_13.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">13</span><h3 class="news-title">[世界杯]1/8决赛：巴西1-2挪威 集锦</h3><p class="news-summary">🇧🇷🇳🇴 全场精彩瞬间回顾</p><span class="tag">⭐ 集锦</span><span class="tag">无解说</span><span class="tag">🇧🇷 巴西</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_br_14.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">14</span><h3 class="news-title">[世界杯]哈兰德独中两元 挪威爆冷击败巴西晋级八强</h3><p class="news-summary">🇳🇴 挪威2-1爆冷击败巴西，晋级八强</p><span class="tag">⭐ 晋级</span><span class="tag">无解说</span><span class="tag">🇳🇴 挪威</span></div></div>
-        </div>
-
-        <h2 class="section-title">🇲🇽 墨西哥 vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰（2:3）· 9个短片段</h2>
-        <div class="news-grid">
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_mx_01.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">01</span><h3 class="news-title">[世界杯]1/8决赛：墨西哥2-3英格兰 集锦</h3><p class="news-summary">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰3-2险胜墨西哥，晋级八强</p><span class="tag">⭐ 集锦</span><span class="tag">无解说</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_mx_02.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">02</span><h3 class="news-title">[世界杯]凯恩反击妙传 贝林厄姆推射梅开二度</h3><p class="news-summary">🏴󠁧󠁢󠁥󠁮󠁧󠁿 贝林厄姆连入两球，英格兰3-1领先</p><span class="tag">⚽ 进球</span><span class="tag">无解说</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_mx_03.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">03</span><h3 class="news-title">[世界杯]险胜墨西哥 英格兰晋级八强</h3><p class="news-summary">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰3-2险胜，赛后庆祝画面</p><span class="tag">⭐ 晋级</span><span class="tag">无解说</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_mx_04.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">04</span><h3 class="news-title">[世界杯]凯恩犯规送点 R·希门尼斯点球破门</h3><p class="news-summary">🇲🇽 希门尼斯点球破门，墨西哥1-1扳平</p><span class="tag">⚽ 点球</span><span class="tag">无解说</span><span class="tag">🇲🇽 墨西哥</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_mx_05.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">05</span><h3 class="news-title">[世界杯]攻防俱佳！贝林厄姆禁区内救险</h3><p class="news-summary">🏴󠁧󠁢󠁥󠁮󠁧󠁿 贝林厄姆门线前关键解围</p><span class="tag">⚽ 防守</span><span class="tag">无解说</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_mx_06.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">06</span><h3 class="news-title">[世界杯]戈登突破造点 凯恩主罚点球一蹴而就</h3><p class="news-summary">🏴󠁧󠁢󠁥󠁮󠁧󠁿 凯恩点球命中，英格兰2-1再次领先</p><span class="tag">⚽ 点球</span><span class="tag">无解说</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_mx_07.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">07</span><h3 class="news-title">[世界杯]宽萨飞铲阿尔瓦拉多被红牌直接罚下</h3><p class="news-summary">🏴󠁧󠁢󠁥󠁮󠁧󠁿 宽萨蹬踏犯规，被红牌罚下</p><span class="tag">🟥 红牌</span><span class="tag">无解说</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_mx_08.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">08</span><h3 class="news-title">[世界杯]萨卡边路传中 贝林厄姆头球破门</h3><p class="news-summary">🏴󠁧󠁢󠁥󠁮󠁧󠁿 贝林厄姆头球破门，英格兰首开纪录</p><span class="tag">⚽ 进球</span><span class="tag">无解说</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</span></div></div>
-            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup6_mx_09.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">09</span><h3 class="news-title">[世界杯]墨西哥任意球造良机 基尼奥内斯爆射破门</h3><p class="news-summary">🇲🇽 基尼奥内斯任意球破门，墨西哥2-3扳回一城</p><span class="tag">⚽ 进球</span><span class="tag">无解说</span><span class="tag">🇲🇽 墨西哥</span></div></div>
-        </div>
-
-        <footer>
-            <p>⚽ 2026世界杯集锦 | <a href="/video/">返回首页</a></p>
-            <div class="footer-links">
-                <a href="/video/history/2026/06/">6月存档</a>
-                <a href="/video/history/2026/07/">7月存档</a>
-                <a href="/video/history/2026/06/20260606.html">6月6日比赛</a>
-                <a href="/video/history/2026/07/20260710.html">7月10日比赛</a>
+        <div class="cover-section">
+            <video src="20260606.mp4" autoplay loop muted playsinline class="cover-image" id="coverVideo"></video>
+            <button class="mute-btn" id="muteBtn" onclick="toggleMute()">🔇</button>
+            <div class="cover-overlay">
+                <p class="cover-subtitle">🐎 万马奔腾 · 2026年6月6日</p>
             </div>
-            <p style="margin-top:10px;">更新日期：2026年6月6日 | 视频来源：CCTV | 均为CCTV原声，无主播解说</p>
-        </footer>
+        </div>
     </div>
+
     <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-        }
+        function toggleTheme() { document.body.classList.toggle('dark-mode'); localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); }
+        function toggleMute() { const v = document.getElementById('coverVideo'); v.muted = !v.muted; document.getElementById('muteBtn').textContent = v.muted ? '🔇' : '🔊'; }
         if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
-        document.querySelector('.search-box')?.addEventListener('input', function(e) {
-            const q = e.target.value.toLowerCase();
-            document.querySelectorAll('.video-card').forEach(card => {
-                card.style.display = card.textContent.toLowerCase().includes(q) ? '' : 'none';
-            });
-        });
     </script>
 </body>
 </html>
