@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ 2026世界杯 — 7月10日1/4决赛</title>
+    <meta name="description" content="2026世界杯1/4决赛：🇫🇷法国2-0🇲🇦摩洛哥 | CCTV原声短集锦（无主播解说）">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-image: url('../../images/website-background-8k.png');
+            --container-bg: white; --text-color: #333;
+            --card-bg: linear-gradient(145deg, #e8f4f8 0%, #ffffff 100%);
+            --tag-bg: #d4e8f0; --tag-color: #1a6a7a;
+            --footer-bg: #f0f6f8; --footer-color: #6c757d;
+            --nav-bg: white; --nav-text: #333; --search-bg: #f8f9fa; --border-color: rgba(0,0,0,0.1);
+        }
+        .dark-mode {
+            --container-bg: #0a1a2a; --text-color: #c0dae0;
+            --card-bg: linear-gradient(145deg, #1a2a3a 0%, #0a1a2a 100%);
+            --tag-bg: #2a3a4a; --tag-color: #4a9aaa;
+            --footer-bg: #0a1a2a; --footer-color: #8090a0;
+            --nav-bg: #1a2a3a; --nav-text: #c0dae0; --search-bg: #1a2a3a; --border-color: rgba(255,255,255,0.1);
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.88); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; backdrop-filter: blur(10px); }
+        .navbar { background: var(--nav-bg); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
+        .theme-toggle { background: none; border: 2px solid var(--border-color); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.9em; color: var(--nav-text); }
+        .search-container { padding: 15px 30px; background: var(--search-bg); border-bottom: 1px solid var(--border-color); }
+        .search-box { width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 25px; font-size: 1em; background: var(--container-bg); color: var(--text-color); }
+        .search-box:focus { outline: none; border-color: #2d6a7a; }
+        .banner { background: linear-gradient(135deg, #1a5a7a, #2d6a7a); color: white; padding: 30px; text-align: center; }
+        .banner h1 { font-size: 2em; margin-bottom: 10px; }
+        .banner p { opacity: 0.9; font-size: 1.1em; }
+        .section-title { font-size: 1.3em; margin: 25px 30px 15px; color: var(--text-color); border-left: 4px solid #2d6a7a; padding-left: 12px; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 0 30px 30px; }
+        .video-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+        .video-card video { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .video-card-info { padding: 15px; }
+        .news-number { background: #2d6a7a; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 8px; }
+        .news-title { font-size: 1.1em; margin: 8px 0; color: var(--text-color); }
+        .news-summary { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        .tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); padding: 4px 10px; border-radius: 15px; font-size: 0.8em; margin-right: 5px; margin-bottom: 5px; }
+        footer { background: var(--footer-bg); color: var(--footer-color); padding: 30px; text-align: center; margin-top: 30px; }
+        footer a { color: #2d6a7a; }
+        .footer-links { margin-top: 10px; }
+        .footer-links a { color: var(--footer-color); margin: 0 10px; }
+        @media(max-width:768px){.nav-links{display:none;}.news-grid{grid-template-columns:1fr;}}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../../index.html" class="navbar-brand">⚽ 世界杯集锦</a>
+        <ul class="nav-links">
+            <li><a href="../../index.html">首页</a></li>
+            <li><a href="../../about.html">关于</a></li>
+            <li><a href="../../contact.html">联系</a></li>
+            <li><a href="../../history.html">历史</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 切换主题</button>
+    </nav>
+    <div class="container">
+        <div class="banner">
+            <h1>🇫🇷 法国 2-0 🇲🇦 摩洛哥</h1>
+            <p>2026年7月10日 1/4决赛 · CCTV原声集锦（无主播解说）</p>
+        </div>
+
+        <h2 class="section-title">🇫🇷 法国 vs 🇲🇦 摩洛哥（2:0）· 5个短片段</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup10_fm_01.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">01</span><h3 class="news-title">[大咖陪你看]世界杯1/4决赛：法国2-0摩洛哥 集锦</h3><p class="news-summary">🇫🇷法国2-0淘汰🇲🇦摩洛哥，晋级四强</p><span class="tag">⭐ 集锦</span><span class="tag">无解说</span><span class="tag">🇫🇷 法国</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup10_fm_02.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">02</span><h3 class="news-title">奥利塞送出直塞 姆巴佩跟进射门高出球门</h3><p class="news-summary">🇫🇷 姆巴佩第51分钟错过扩大比分机会</p><span class="tag">⚽ 射偏</span><span class="tag">无解说</span><span class="tag">🇫🇷 法国</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup10_fm_03.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">03</span><h3 class="news-title">姆巴佩兜射远角破门 法国队取得领先</h3><p class="news-summary">🇫🇷 姆巴佩第16分钟任意球直接破门！法国1-0</p><span class="tag">⚽ 进球</span><span class="tag">无解说</span><span class="tag">🇫🇷 法国</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup10_fm_04.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">04</span><h3 class="news-title">登贝莱长驱直入远射破门 法国再下一城</h3><p class="news-summary">🇫🇷 登贝莱第53分钟一条龙破门！法国2-0锁定胜局</p><span class="tag">⚽ 进球</span><span class="tag">无解说</span><span class="tag">🇫🇷 法国</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/worldcup10_fm_05.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">05</span><h3 class="news-title">姆巴佩突破造点 亲自主罚被门将扑出</h3><p class="news-summary">🇫🇷 姆巴佩突入禁区造点，但点球被扑出</p><span class="tag">⚽ 点球</span><span class="tag">无解说</span><span class="tag">🇫🇷 法国</span></div></div>
+        </div>
+
+        <footer>
+            <p>⚽ 2026世界杯集锦 | <a href="/video/">返回首页</a></p>
+            <div class="footer-links">
+                <a href="/video/history/2026/07/">7月存档</a>
+                <a href="/video/history/2026/07/20260707.html">7月7日比赛</a>
+                <a href="/video/history/2026/07/20260708.html">7月8日比赛</a>
+            </div>
+            <p style="margin-top:10px;">更新日期：2026年7月10日 | 视频来源：CCTV | 均为CCTV原声，无主播解说</p>
+        </footer>
+    </div>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+        if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+        document.querySelector('.search-box')?.addEventListener('input', function(e) {
+            const q = e.target.value.toLowerCase();
+            document.querySelectorAll('.video-card').forEach(card => {
+                card.style.display = card.textContent.toLowerCase().includes(q) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
