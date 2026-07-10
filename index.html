@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="2026世界杯1/8决赛：🇦🇷阿根廷2-1埃及 + 🇨🇭瑞士2-0哥伦比亚全场录像">
+    <meta name="description" content="2026世界杯1/4决赛：🇫🇷法国2-0🇲🇦摩洛哥 | CCTV原声短集锦（无主播解说）">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -83,65 +83,49 @@
                 <input type="text" id="searchInput" class="search-box" placeholder="🔍 搜索比赛...（支持球队、标签、描述）" oninput="searchVideo()">
             </div>
             <div class="cover-section">
-                <video src="videos/worldcup8_01.mp4" autoplay loop playsinline class="cover-image" id="coverVideo" onmouseover="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='1'" onmouseout="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='0'"></video>
+                <video src="videos/worldcup10_fm_03.mp4" autoplay loop playsinline class="cover-image" id="coverVideo" onmouseover="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='1'" onmouseout="this.closest('.cover-section').querySelector('.cover-overlay').style.opacity='0'"></video>
                 <button class="mute-btn" id="muteBtn" onclick="toggleMute()" title="开关声音">🔇</button>
                 <div class="cover-overlay">
-                    <h1 class="cover-title">🇦🇷阿根廷 2-1 埃及</h1>
-                    <p class="cover-subtitle">⚽ 2026世界杯 · 1/8决赛 · 2026年7月8日</p>
+                    <h1 class="cover-title">🇫🇷法国 2-0 🇲🇦摩洛哥</h1>
+                    <p class="cover-subtitle">⚽ 2026世界杯 · 1/4决赛 · 2026年7月10日</p>
                 </div>
             </div>
 
-            <div class="warning">📅 2026世界杯1/8决赛 · 7月8日 · 🇦🇷阿根廷2-1埃及 + 🇨🇭瑞士2-0哥伦比亚（全场录像，67+44段）</div>
+            <div class="warning">📅 2026世界杯1/4决赛 · 7月10日 · 🇫🇷法国2-0🇲🇦摩洛哥（CCTV原声短集锦，无主播解说）</div>
 
             <div class="news-grid">
-            <!-- 🇦🇷 阿根廷 vs 🇪🇬 埃及 (67段) -->
-            <div class="video-card" onclick="location.href='history/2026/07/20260708.html'">
+            <!-- 🇫🇷 法国 vs 🇲🇦 摩洛哥 (5段) -->
+            <div class="video-card" onclick="location.href='history/2026/07/20260710.html'">
                 <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup8_01.mp4" type="video/mp4">
+                    <source src="videos/worldcup10_fm_03.mp4" type="video/mp4">
                 </video>
                 <div class="video-card-info">
                     <span class="news-number">01</span>
-                    <h3 class="news-title">🇦🇷 阿根廷 2-1 🇪🇬 埃及</h3>
-                    <p class="news-summary">全场录像 · 67段 · 约132分钟 · 晋级8强！</p>
-                    <span class="tag">⭐ 完整全场</span>
-                    <span class="tag">🇦🇷 阿根廷</span>
-                    <span class="tag">🇪🇬 埃及</span>
-                </div>
-            </div>
-            <!-- 🇨🇭 瑞士 vs 🇨🇴 哥伦比亚 (44段) -->
-            <div class="video-card" onclick="location.href='history/2026/07/20260708.html'">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup8_68.mp4" type="video/mp4">
-                </video>
-                <div class="video-card-info">
-                    <span class="news-number">68</span>
-                    <h3 class="news-title">🇨🇭 瑞士 2-0 🇨🇴 哥伦比亚</h3>
-                    <p class="news-summary">全场录像 · 44段 · 约175分钟 · 晋级8强！</p>
-                    <span class="tag">⭐ 完整全场</span>
-                    <span class="tag">🇨🇭 瑞士</span>
-                    <span class="tag">🇨🇴 哥伦比亚</span>
+                    <h3 class="news-title">🇫🇷 法国 2-0 🇲🇦 摩洛哥</h3>
+                    <p class="news-summary">姆巴佩兜射破门 + 登贝莱一条龙 · CCTV原声集锦</p>
+                    <span class="tag">⭐ 集锦</span>
+                    <span class="tag">🇫🇷 法国</span>
+                    <span class="tag">🇲🇦 摩洛哥</span>
                 </div>
             </div>
             <!-- 占位卡 -->
             <div class="video-card">
                 <video autoplay muted loop playsinline>
-                    <source src="videos/worldcup8_01.mp4" type="video/mp4">
+                    <source src="videos/worldcup10_fm_01.mp4" type="video/mp4">
                 </video>
                 <div class="video-card-info">
-                    <span class="news-number">⚽</span>
+                    <span class="news-number">02</span>
                     <h3 class="news-title">更多比赛陆续更新中</h3>
-                    <p class="news-summary">1/8决赛精彩继续，敬请期待！</p>
-                    <span class="tag">赛程：7月9日-10日</span>
-                    <span class="tag">荷兰vs罗马尼亚</span>
-                    <span class="tag">法国vs爱尔兰</span>
+                    <p class="news-summary">1/4决赛精彩继续，敬请期待！</p>
+                    <span class="tag">赛程：7月11日-12日</span>
                 </div>
             </div>
             </div>
 
             <div class="comments-section">
                 <h2 class="comments-title">📺 观看说明</h2>
-                <p>所有视频均为B站世界杯全场录像，每个视频约2-5分钟，点击卡片即可观看。<br>
-                共收录：阿根廷vs埃及（67段）+ 瑞士vs哥伦比亚（44段），全部支持浏览器直接播放。</p>
+                <p>所有视频均为CCTV原声短集锦（无主播解说），每个视频约1-3分钟，点击卡片即可观看。<br>
+                共收录：法国vs摩洛哥（5段），全部支持浏览器直接播放。</p>
             </div>
         </div>
     </div>
