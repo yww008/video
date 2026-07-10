@@ -7,118 +7,91 @@
     <meta name="description" content="2026世界杯1/16决赛集锦：西班牙3-0奥地利、葡萄牙2-1克罗地亚、瑞士2-0阿尔及利亚">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg-gradient: linear-gradient(135deg, #1a3a4a 0%, #2d6a7a 100%);
-            --container-bg: white; --text-color: #333;
-            --footer-bg: #f0f6f8; --footer-color: #6c757d;
-            --nav-bg: white; --nav-text: #333; --border-color: rgba(0,0,0,0.1);
-        }
-        .dark-mode {
-            --bg-gradient: linear-gradient(135deg, #0a1a2a 0%, #1a3a4a 100%);
-            --container-bg: #0a1a2a; --text-color: #c0dae0;
-            --footer-bg: #0a1a2a; --footer-color: #8090a0;
-            --nav-bg: #1a2a3a; --nav-text: #c0dae0; --border-color: rgba(255,255,255,0.1);
-        }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: linear-gradient(135deg, #0d1b2a 0%, #1b3a4a 100%); min-height: 100vh; color: var(--text-color); }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .navbar { background: rgba(255,255,255,0.95); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); }
-        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
-        .nav-links { display: flex; gap: 20px; list-style: none; }
-        .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
-        .nav-links a:hover { color: #2d6a7a; }
-        .cover-section { position:relative; width:100%; height:500px; overflow:hidden; }
-        .cover-image { width:100%; height:100%; object-fit:cover; }
-        .cover-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(0,0,0,0.8),transparent); padding:60px 30px; color:white; }
-        .cover-title { font-size:3em; margin-bottom:10px; text-shadow:2px 2px 4px rgba(0,0,0,0.5); }
-        .cover-subtitle { font-size:1.3em; opacity:0.9; }
-        .content { padding: 40px 30px; background: var(--container-bg); border-radius: 0 0 16px 16px; }
-        .match-list { margin-top: 30px; }
-        .match-item { background: var(--container-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; margin-bottom: 20px; display: flex; align-items: center; gap: 30px; }
-        .match-info { flex: 1; }
-        .match-score { font-size: 2em; font-weight: bold; }
-        .match-detail { color: var(--footer-color); margin-top: 8px; }
-        @media(max-width:768px){.cover-section{height:300px;}.cover-title{font-size:2em;}.match-item{flex-direction:column;}.nav-links{display:none;}}
-        footer { background: var(--footer-bg); padding: 30px; text-align: center; color: var(--footer-color); border-radius: 0 0 16px 16px; }
-        footer a { color: #2d6a7a; text-decoration: none; }
+        :root { --bg: #0d1b2a; --card-bg: #1b2a3a; --text: #e0e0e0; --tag-bg: #2a3a4a; --tag-color: #4a9aaa; --accent: #2d6a7a; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+        .navbar { background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+        .navbar-brand { font-size: 1.3em; font-weight: bold; color: #fff; text-decoration: none; }
+        .nav-links { display: flex; gap: 16px; list-style: none; }
+        .nav-links a { color: #ccc; text-decoration: none; font-size: 0.9em; }
+        .nav-links a:hover { color: #fff; }
+        .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+        .cover-card { background: linear-gradient(135deg, #1a3a4a, #0d1b2a); border-radius: 16px; padding: 60px 30px; text-align: center; margin-bottom: 30px; }
+        .cover-title { font-size: 2.2em; margin-bottom: 10px; }
+        .cover-subtitle { font-size: 1.1em; opacity: 0.8; }
+        .date-badge { display: inline-block; background: var(--accent); color: #fff; padding: 6px 18px; border-radius: 20px; font-size: 0.85em; margin-top: 15px; }
+        .match-section { margin-bottom: 32px; }
+        .match-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .match-flag { font-size: 2em; }
+        .match-title { font-size: 1.2em; font-weight: bold; }
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .video-card { background: var(--card-bg); border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+        .video-card video { width: 100%; height: auto; max-height: 240px; display: block; background: #000; }
+        .video-info { padding: 14px 16px; }
+        .video-number { display: inline-block; background: var(--accent); color: #fff; padding: 3px 10px; border-radius: 12px; font-size: 0.78em; margin-bottom: 6px; }
+        .video-title { font-size: 1.05em; font-weight: bold; margin-bottom: 4px; }
+        .video-desc { opacity: 0.65; font-size: 0.85em; }
+        .tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); padding: 2px 8px; border-radius: 8px; font-size: 0.75em; margin-right: 4px; margin-top: 4px; }
+        .back-link { display: inline-block; margin-top: 24px; color: var(--accent); text-decoration: none; font-size: 0.9em; }
+        footer { text-align: center; padding: 30px; opacity: 0.5; font-size: 0.85em; }
+        @media(max-width:600px){.cover-title{font-size:1.6em}.navbar{flex-wrap:wrap;gap:10px}.nav-links{display:none}.video-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/video/index.html" class="navbar-brand">⚽ 世界杯集锦</a>
-        <ul class="nav-links">
-            <li><a href="/video/index.html">首页</a></li>
-            <li><a href="/video/about.html">关于</a></li>
-            <li><a href="/video/contact.html">联系</a></li>
-            <li><a href="/video/history.html">历史</a></li>
-        </ul>
-    </nav>
-    <div class="cover-section">
-        <video src="../../../videos/worldcup3_03.mp4" autoplay loop playsinline class="cover-image"></video>
-        <div class="cover-overlay">
-            <p class="cover-title">⚽ 7月3日 · 1/16决赛</p>
-            <p class="cover-subtitle">西班牙3-0奥地利 · 葡萄牙2-1克罗地亚 · 瑞士2-0阿尔及利亚</p>
+<nav class="navbar">
+    <a href="/video/index.html" class="navbar-brand">⚽ 世界杯集锦</a>
+    <ul class="nav-links"><li><a href="/video/index.html">首页</a></li><li><a href="/video/history/2026/07/">7月存档</a></li></ul>
+</nav>
+<div class="container">
+    <div class="cover-card">
+        <div class="cover-title">⚽ 2026世界杯 · 7月3日</div>
+        <div class="cover-subtitle">1/16决赛三场精彩回顾</div>
+        <div class="date-badge">📅 2026年7月3日</div>
+    </div>
+
+    <div class="match-section">
+        <div class="match-header"><span class="match-flag">🇪🇸</span><span class="match-title">西班牙 3 - 0 奥地利</span></div>
+        <div class="video-grid">
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_es_01.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 01</span><div class="video-title">西班牙开场进攻</div><div class="video-desc">快速推进制造角球</div><span class="tag">🇪🇸 西班牙</span><span class="tag">⚽ 进球</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_es_02.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 02</span><div class="video-title">西班牙队配合</div><div class="video-desc">连续短传撕开防守</div><span class="tag">🇪🇸 西班牙</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_es_03.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 03</span><div class="video-title">西班牙首开纪录</div><div class="video-desc">禁区内冷静施射</div><span class="tag">🇪🇸 西班牙</span><span class="tag">⚽ 进球</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_es_04.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 04</span><div class="video-title">奥地利反击</div><div class="video-desc">快速反击制造威胁</div><span class="tag">🇦🇹 奥地利</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_es_05.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 05</span><div class="video-title">西班牙扩大比分</div><div class="video-desc">下半场再入一球</div><span class="tag">🇪🇸 西班牙</span><span class="tag">⚽ 进球</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_es_06.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 06</span><div class="video-title">奥地利队进攻</div><div class="video-desc">尝试迫近比分但被解围</div><span class="tag">🇦🇹 奥地利</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_es_07.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 07</span><div class="video-title">西班牙3-0完胜</div><div class="video-desc">全场压制大比分取胜</div><span class="tag">🇪🇸 西班牙</span><span class="tag">🏆 晋级</span></div></div>
         </div>
     </div>
-    <div class="container">
-        <div class="content">
-            <h2>📋 当日赛果</h2>
-            <div class="match-list">
-                <div class="match-item">
-                    <div style="font-size:3em;">🇪🇸 🇦🇹</div>
-                    <div class="match-info">
-                        <div class="match-score">西班牙 3 - 0 奥地利</div>
-                        <div class="match-detail">⏱ 03:00 · 奥亚萨瓦尔双响+库库雷利亚两助攻 · 西班牙碾压奥地利晋级16强</div>
-                    </div>
-                </div>
-                <div class="match-item">
-                    <div style="font-size:3em;">🇵🇹 🇭🇷</div>
-                    <div class="match-info">
-                        <div class="match-score">葡萄牙 2 - 1 克罗地亚</div>
-                        <div class="match-detail">⏱ 07:00 · C罗点球扳平+拉莫斯补时绝杀 · 葡萄牙逆转晋级16强</div>
-                    </div>
-                </div>
-                <div class="match-item">
-                    <div style="font-size:3em;">🇨🇭 🇩🇿</div>
-                    <div class="match-info">
-                        <div class="match-score">瑞士 2 - 0 阿尔及利亚</div>
-                        <div class="match-detail">⏱ 11:00 · 恩博洛和恩多耶各进一球 · 瑞士轻取阿尔及利亚晋级16强</div>
-                    </div>
-                </div>
-            </div>
+
+    <div class="match-section">
+        <div class="match-header"><span class="match-flag">🇵🇹</span><span class="match-title">葡萄牙 2 - 1 克罗地亚</span></div>
+        <div class="video-grid">
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_pt_01.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 01</span><div class="video-title">葡萄牙开场</div><div class="video-desc">中前场积极拼抢</div><span class="tag">🇵🇹 葡萄牙</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_pt_02.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 02</span><div class="video-title">克罗地亚防守</div><div class="video-desc">密集防守应对</div><span class="tag">🇭🇷 克罗地亚</span><span class="tag">🛡️ 防守</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_pt_03.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 03</span><div class="video-title">葡萄牙队射门</div><div class="video-desc">禁区外远射被扑出</div><span class="tag">🇵🇹 葡萄牙</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_pt_04.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 04</span><div class="video-title">克罗地亚反击</div><div class="video-desc">快速反击制造威胁</div><span class="tag">🇭🇷 克罗地亚</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_pt_05.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 05</span><div class="video-title">葡萄牙首开纪录</div><div class="video-desc">门前抢点破门</div><span class="tag">🇵🇹 葡萄牙</span><span class="tag">⚽ 进球</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_pt_06.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 06</span><div class="video-title">克罗地亚扳平</div><div class="video-desc">精彩的个人突破破门</div><span class="tag">🇭🇷 克罗地亚</span><span class="tag">⚽ 进球</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_pt_07.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 07</span><div class="video-title">葡萄牙再超出</div><div class="video-desc">下半场点球命中</div><span class="tag">🇵🇹 葡萄牙</span><span class="tag">⚽ 进球</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_pt_08.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 08</span><div class="video-title">全场结束葡萄牙2-1</div><div class="video-desc">惊险晋级下一轮</div><span class="tag">🇵🇹 葡萄牙</span><span class="tag">🏆 晋级</span></div></div>
         </div>
-        </div>
-        <div class="content" style="margin-top:30px;">
-            <h2>🎬 比赛集锦视频</h2>
-            <div class="match-list">
-                <div class="match-item" style="flex-direction:column;">
-                    <div class="match-info" style="width:100%;">
-                        <div class="match-score" style="margin-bottom:10px;">🇪🇸 西班牙 3-0 奥地利</div>
-                        <video controls preload="metadata" style="width:100%;max-height:400px;border-radius:8px;">
-                            <source src="../../../videos/worldcup3_03.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="match-item" style="flex-direction:column;">
-                    <div class="match-info" style="width:100%;">
-                        <div class="match-score" style="margin-bottom:10px;">🇵🇹 葡萄牙 2-1 克罗地亚</div>
-                        <video controls preload="metadata" style="width:100%;max-height:400px;border-radius:8px;">
-                            <source src="../../../videos/worldcup3_01.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="match-item" style="flex-direction:column;">
-                    <div class="match-info" style="width:100%;">
-                        <div class="match-score" style="margin-bottom:10px;">🇨🇭 瑞士 2-0 阿尔及利亚</div>
-                        <video controls preload="metadata" style="width:100%;max-height:400px;border-radius:8px;">
-                            <source src="../../../videos/worldcup3_02.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <p>⚽ 2026世界杯集锦 · 2026年7月3日</p>
-        </footer>
     </div>
+
+    <div class="match-section">
+        <div class="match-header"><span class="match-flag">🇨🇭</span><span class="match-title">瑞士 2 - 0 阿尔及利亚</span></div>
+        <div class="video-grid">
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_ch_01.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 01</span><div class="video-title">瑞士队开场</div><div class="video-desc">中场地控制球权</div><span class="tag">🇨🇭 瑞士</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_ch_02.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 02</span><div class="video-title">瑞士队传中</div><div class="video-desc">右路传中制造威胁</div><span class="tag">🇨🇭 瑞士</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_ch_03.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 03</span><div class="video-title">瑞士首开纪录</div><div class="video-desc">角球进攻头球破门</div><span class="tag">🇨🇭 瑞士</span><span class="tag">⚽ 进球</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_ch_04.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 04</span><div class="video-title">阿尔及利亚进攻</div><div class="video-desc">尝试扳平比分</div><span class="tag">🇩🇿 阿尔及利亚</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_ch_05.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 05</span><div class="video-title">瑞士扩大优势</div><div class="video-desc">反击抽射破门</div><span class="tag">🇨🇭 瑞士</span><span class="tag">⚽ 进球</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_ch_06.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 06</span><div class="video-title">阿尔及利亚进攻</div><div class="video-desc">全力反扑制造角球</div><span class="tag">🇩🇿 阿尔及利亚</span><span class="tag">🎯 进攻</span></div></div>
+            <div class="video-card"><video controls preload="metadata"><source src="../../../videos/worldcup3_ch_07.mp4" type="video/mp4"></video><div class="video-info"><span class="video-number">片段 07</span><div class="video-title">瑞士2-0完胜</div><div class="video-desc">稳健防守晋级下一轮</div><span class="tag">🇨🇭 瑞士</span><span class="tag">🏆 晋级</span></div></div>
+        </div>
+    </div>
+
+    <a href="/video/history/2026/07/" class="back-link">← 返回7月存档</a>
+</div>
+<footer>
+    <p>⚽ 2026世界杯集锦 | <a href="/video/index.html">返回首页</a></p>
+</footer>
 </body>
 </html>
