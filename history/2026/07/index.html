@@ -3,51 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026世界杯7月归档 · 世界杯视频集锦</title>
+    <title>2026年7月存档 | 世界杯集锦</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0a0e13; color: #e0e6ed; min-height: 100vh; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        h1 { text-align: center; font-size: 2em; margin-bottom: 30px; color: #fff; }
-        .archive-list { display: flex; flex-direction: column; gap: 12px; }
-        .archive-item { background: #1a2530; border-radius: 12px; padding: 20px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; transition: background 0.2s; }
-        .archive-item:hover { background: #2d3a4a; }
-        .archive-date { font-size: 1.1em; color: #4fc3f7; font-weight: 600; }
-        .archive-desc { color: #8a9aaa; font-size: 0.9em; margin-top: 4px; }
-        .back-link { display: inline-block; margin-bottom: 20px; color: #4fc3f7; text-decoration: none; font-size: 0.95em; }
-        .back-link:hover { text-decoration: underline; }
+        :root { --bg-gradient: linear-gradient(135deg, #0d1b2a 0%, #1b3a4a 100%); --container-bg: white; --text-color: #333; --nav-bg: white; --nav-text: #333; --border-color: rgba(0,0,0,0.1); }
+        .dark-mode { --bg-gradient: linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 100%); --container-bg: #0d1b2a; --text-color: #c0dae0; --nav-bg: #1a2a3a; --nav-text: #c0dae0; --border-color: rgba(255,255,255,0.1); }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-gradient); min-height: 100vh; padding: 20px; color: var(--text-color); }
+        .container { max-width: 800px; margin: 0 auto; background: var(--container-bg); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: var(--nav-bg); border-bottom: 1px solid var(--border-color); }
+        .nav-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: var(--nav-text); text-decoration: none; }
+        .nav-links a:hover { opacity: 0.7; }
+        .content { padding: 40px 30px; }
+        h1 { font-size: 2em; margin-bottom: 30px; }
+        .days-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; }
+        .day-card { background: var(--container-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center; transition: transform 0.3s; }
+        .day-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .day-card a { text-decoration: none; color: var(--text-color); display: block; }
+        .day-card .day-icon { font-size: 2.5em; margin-bottom: 10px; }
+        footer { padding: 20px; text-align: center; font-size: 0.9em; opacity: 0.7; border-top: 1px solid var(--border-color); }
+        footer a { color: #2d6a7a; text-decoration: none; }
+        @media(max-width:600px){ .navbar { flex-direction: column; gap: 10px; } .days-grid { grid-template-columns: 1fr 1fr; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="../index.html" class="back-link">← 返回历史目录</a>
-        <h1>📅 2026世界杯7月归档</h1>
-        <div class="archive-list">
-            <a href="20260712.html" class="archive-item">
-                <div><div class="archive-date">7月12日</div><div class="archive-desc">英格兰2-1挪威 + 阿根廷2-0瑞士 · 15个CCTV原声精彩片段</div></div>
-                <div style="color:#4fc3f7;">→</div>
-            </a>
-            <a href="20260706.html" class="archive-item">
-                <div><div class="archive-date">7月6日</div><div class="archive-desc">1/16决赛+1/8决赛精彩片段</div></div>
-                <div style="color:#4fc3f7;">→</div>
-            </a>
-            <a href="20260704.html" class="archive-item">
-                <div><div class="archive-date">7月4日</div><div class="archive-desc">澳大利亚点球5-3埃及 + 阿根廷3-2佛得角 + 哥伦比亚1-0加纳</div></div>
-                <div style="color:#4fc3f7;">→</div>
-            </a>
-            <a href="20260703.html" class="archive-item">
-                <div><div class="archive-date">7月3日</div><div class="archive-desc">西班牙3-0奥地利 + 葡萄牙2-1克罗地亚 + 瑞士2-0阿尔及利亚</div></div>
-                <div style="color:#4fc3f7;">→</div>
-            </a>
-            <a href="20260702.html" class="archive-item">
-                <div><div class="archive-date">7月2日</div><div class="archive-desc">英格兰3-1刚果 + 比利时2-0塞内加尔 + 美国2-1波黑</div></div>
-                <div style="color:#4fc3f7;">→</div>
-            </a>
-            <a href="20260701.html" class="archive-item">
-                <div><div class="archive-date">7月1日</div><div class="archive-desc">墨西哥3-0厄瓜多尔 + 法国2-1瑞典 + 科特迪瓦2-0挪威</div></div>
-                <div style="color:#4fc3f7;">→</div>
-            </a>
+        <nav class="navbar">
+            <div class="nav-brand">⚽ 2026年7月</div>
+            <ul class="nav-links">
+                <li><a href="/video/">首页</a></li>
+                <li><a href="/video/history.html">全部存档</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>⚽ 7月存档 · 世界杯1/16决赛 / 1/8决赛</h1>
+            <div class="days-grid">
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260701.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月1日</div>
+                        <div class="day-desc">1/16决赛 · 三场</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260702.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月2日</div>
+                        <div class="day-desc">1/16决赛 · 三场</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260703.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月3日</div>
+                        <div class="day-desc">1/16决赛 · 三场</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260704.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月4日</div>
+                        <div class="day-desc">1/16决赛 · 三场</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260705.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月5日</div>
+                        <div class="day-desc">1/8决赛 · 两场</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260706.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月6日</div>
+                        <div class="day-desc">1/8决赛 · 两场</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260707.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月7日</div>
+                        <div class="day-desc">🇪🇸西班牙+🇺🇸美国</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260708.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月8日</div>
+                        <div class="day-desc">🇦🇷阿根廷+🇨🇭瑞士</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260710.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月10日</div>
+                        <div class="day-desc">🇫🇷法国vs🇲🇦摩洛哥</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260711.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月11日</div>
+                        <div class="day-desc">🇪🇸西班牙vs🇧🇪比利时</div>
+                    </a>
+                </div>
+                <div class="day-card">
+                    <a href="/video/history/2026/07/20260712.html">
+                        <div class="day-icon">⚽</div>
+                        <div class="day-name">7月12日</div>
+                        <div class="day-desc">🏴󠁧󠁢󠁥󠁮󠁧󠁿英格兰vs🇳🇴挪威 + 🇦🇷阿根廷vs🇨🇭瑞士</div>
+                    </a>
+                </div>
+            </div>
         </div>
+        <footer>
+            <p>⚽ 2026世界杯集锦 | <a href="/video/">返回首页</a></p>
+        </footer>
     </div>
 </body>
 </html>
