@@ -1,0 +1,11 @@
+# Ignore untracked large files for speed
+videos/july12_*/
+videos/july13_*/
+videos/july14_*/
+videos/july15/
+videos/worldcup1_*/
+videos/worldcup2_*/
+videos/worldcup3_*/
+videos/worldcup4_*/
+videos/worldcup6_*/
+videos/worldcup11_*/
