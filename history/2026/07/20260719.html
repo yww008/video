@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ 2026世界杯 — 7月19日 三四名决赛</title>
+    <meta name="description" content="2026世界杯三四名决赛：🇫🇷法国4-6🏴󠁧󠁢󠁥󠁮󠁧󠁿英格兰 | 萨卡帽子戏法助英格兰夺季军 | CCTV原声短集锦(无主播解说)">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-image: url('../../../images/website-background-8k.png');
+            --container-bg: white; --text-color: #333;
+            --card-bg: linear-gradient(145deg, #e8f4f8 0%, #ffffff 100%);
+            --tag-bg: #d4e8f0; --tag-color: #1a6a7a;
+            --footer-bg: #f0f6f8; --footer-color: #6c757d;
+            --nav-bg: white; --nav-text: #333; --search-bg: #f8f9fa; --border-color: rgba(0,0,0,0.1);
+        }
+        .dark-mode {
+            --container-bg: #0a1a2a; --text-color: #c0dae0;
+            --card-bg: linear-gradient(145deg, #1a2a3a 0%, #0a1a2a 100%);
+            --tag-bg: #2a3a4a; --tag-color: #4a9aaa;
+            --footer-bg: #0a1a2a; --footer-color: #8090a0;
+            --nav-bg: #1a2a3a; --nav-text: #c0dae0; --search-bg: #1a2a3a; --border-color: rgba(255,255,255,0.1);
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.88); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; backdrop-filter: blur(10px); }
+        .navbar { background: var(--nav-bg); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
+        .theme-toggle { background: none; border: 2px solid var(--border-color); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.9em; color: var(--nav-text); }
+        .search-container { padding: 15px 30px; background: var(--search-bg); border-bottom: 1px solid var(--border-color); }
+        .search-box { width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 25px; font-size: 1em; background: var(--container-bg); color: var(--text-color); }
+        .search-box:focus { outline: none; border-color: #2d6a7a; }
+        .banner { background: linear-gradient(135deg, #1a3a5a, #2d5a7a); color: white; padding: 30px; text-align: center; }
+        .banner h1 { font-size: 2em; margin-bottom: 10px; }
+        .banner p { opacity: 0.9; font-size: 1.1em; }
+        .section-title { font-size: 1.3em; margin: 25px 30px 15px; color: var(--text-color); border-left: 4px solid #2d6a7a; padding-left: 12px; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 0 30px 30px; }
+        .video-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+        .video-card video { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .video-card-info { padding: 15px; }
+        .news-number { background: #2d6a7a; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 8px; }
+        .news-title { font-size: 1.1em; margin: 8px 0; color: var(--text-color); }
+        .news-summary { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        .tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); padding: 4px 10px; border-radius: 15px; font-size: 0.8em; margin-right: 5px; margin-bottom: 5px; }
+        footer { background: var(--footer-bg); color: var(--footer-color); padding: 30px; text-align: center; margin-top: 30px; }
+        footer a { color: #2d6a7a; }
+        .footer-links { margin-top: 10px; }
+        .footer-links a { color: var(--footer-color); margin: 0 10px; }
+        .hidden { display: none; }
+        @media(max-width:768px){.nav-links{display:none;}.news-grid{grid-template-columns:1fr;}}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../../../index.html" class="navbar-brand">⚽ 世界杯集锦</a>
+        <ul class="nav-links">
+            <li><a href="../../../index.html">首页</a></li>
+            <li><a href="../../../about.html">关于</a></li>
+            <li><a href="../../../contact.html">联系</a></li>
+            <li><a href="../../../history.html">历史</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 切换主题</button>
+    </nav>
+    <div class="container">
+        <div class="banner">
+            <h1>⚽ 2026世界杯 三四名决赛 · 7月19日</h1>
+            <p>🇫🇷 法国 4-6 🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰 &nbsp;|&nbsp; 进球大战！萨卡帽子戏法 &nbsp;|&nbsp; 英格兰夺得季军</p>
+        </div>
+
+        <!-- 全场集锦 -->
+        <h2 class="section-title">🇫🇷 法国 vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰（4:6）· 全场集锦</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_01.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE01</span><h3 class="news-title">[大咖陪你看]世界杯三四名决赛：法国4-6英格兰 集锦</h3><p class="news-summary">进球大战！英格兰6:4淘汰法国夺得季军，创六十年最佳成绩</p><span class="tag">⭐ 全场集锦</span><span class="tag">无解说</span><span class="tag">🇫🇷 法国</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_03.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE03</span><h3 class="news-title">[世界杯]英格兰夺得季军创六十年最佳成绩</h3><p class="news-summary">英格兰6:4力克法国夺得2026世界杯季军，创队史六十年来最佳战绩</p><span class="tag">⭐ 赛后报道</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰</span></div></div>
+        </div>
+
+        <!-- 球员集锦 -->
+        <h2 class="section-title">🇫🇷 法国 vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰 · 球员集锦</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_02.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE02</span><h3 class="news-title">[世界杯]三四名决赛：法国4-6英格兰 萨卡集锦</h3><p class="news-summary">萨卡上演帽子戏法+点球，全场最佳球员，助英格兰勇夺季军</p><span class="tag">⭐ 球员集锦</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 萨卡</span></div></div>
+        </div>
+
+        <!-- 上半场进球 -->
+        <h2 class="section-title">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰 · 上半场进球（4球）</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_04.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE04</span><h3 class="news-title">[世界杯]赖斯禁区外突施冷箭 英格兰1-0领先</h3><p class="news-summary">赖斯禁区外远射破门，为英格兰首开纪录</p><span class="tag">⚽ 进球</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 赖斯</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_05.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE05</span><h3 class="news-title">[世界杯]赖斯角球直传中路 孔萨头球破门</h3><p class="news-summary">赖斯角球精准传中，孔萨头球扩大比分 2-0</p><span class="tag">⚽ 进球</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 孔萨</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_06.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE06</span><h3 class="news-title">[世界杯]萨卡左脚抽射破门 英格兰3-0大幅领先</h3><p class="news-summary">萨卡左脚抽射破网，英格兰早早取得三球领先优势</p><span class="tag">⚽ 进球</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 萨卡</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_07.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE07</span><h3 class="news-title">[世界杯]萨卡上演梅开二度 突入禁区后左脚推射得分</h3><p class="news-summary">萨卡突入禁区左脚推射，梅开二度！英格兰 4-0 领先</p><span class="tag">⚽ 进球</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 萨卡</span></div></div>
+        </div>
+
+        <!-- 下半场进球 -->
+        <h2 class="section-title">🇫🇷 法国 · 下半场反扑（4球）</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_08.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE08</span><h3 class="news-title">[世界杯]奥利塞斜塞门前 姆巴佩跟进推射破门</h3><p class="news-summary">奥利塞斜塞，姆巴佩跟进推射为法国扳回一城 4-1</p><span class="tag">⚽ 进球</span><span class="tag">🇫🇷 姆巴佩</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_09.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE09</span><h3 class="news-title">[世界杯]姆巴佩快速直塞 巴尔科拉杀入禁区左侧推射得分</h3><p class="news-summary">姆巴佩快速直塞，巴尔科拉推射再追一分 4-2</p><span class="tag">⚽ 进球</span><span class="tag">🇫🇷 巴尔科拉</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_10.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE10</span><h3 class="news-title">[世界杯]姆巴佩禁区中路低射得分 上演梅开二度</h3><p class="news-summary">姆巴佩梅开二度！法国追至 4-3，比赛悬念再起</p><span class="tag">⚽ 进球</span><span class="tag">🇫🇷 姆巴佩</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_12.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE12</span><h3 class="news-title">[世界杯]于帕梅卡诺直塞 登贝莱禁区内切左脚攻门</h3><p class="news-summary">登贝莱内切左脚攻门得手，法国队追至 5-4</p><span class="tag">⚽ 进球</span><span class="tag">🇫🇷 登贝莱</span></div></div>
+        </div>
+
+        <!-- 英格兰锁定胜局 -->
+        <h2 class="section-title">🏴󠁧󠁢󠁥󠁮󠁧󠁿 英格兰 · 锁定胜局</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_11.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE11</span><h3 class="news-title">[世界杯]古斯托送出点球 萨卡完成帽子戏法</h3><p class="news-summary">古斯托犯规送点，萨卡点球帽子戏法！英格兰 6-4 锁定季军</p><span class="tag">⚽ 进球</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 萨卡</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FE_13.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FE13</span><h3 class="news-title">[世界杯]贝林厄姆完成一条龙 中场推进深入禁区抽射破门</h3><p class="news-summary">贝林厄姆一条龙突破抽射，英格兰 6-4 彻底杀死比赛</p><span class="tag">⚽ 进球</span><span class="tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 贝林厄姆</span></div></div>
+        </div>
+
+        <footer>
+            <p>⚽ 2026世界杯集锦 | 视频来源：CCTV（无主播解说）</p>
+            <div class="footer-links">
+                <a href="../../../index.html">首页</a> | <a href="../../../about.html">关于</a> | <a href="../../../contact.html">联系</a> | <a href="../../../history.html">历史</a>
+            </div>
+            <p style="margin-top:10px;font-size:0.9em;">2026年7月19日 三四名决赛 | 法国 4-6 英格兰 | 共13个视频片段</p>
+        </footer>
+    </div>
+    <script>
+        function toggleTheme(){document.body.classList.toggle('dark-mode');localStorage.setItem('theme',document.body.classList.contains('dark-mode')?'dark':'light');}
+        const saved=localStorage.getItem('theme');if(saved==='dark')document.body.classList.add('dark-mode');
+        if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches&&!saved)document.body.classList.add('dark-mode');
+        function searchVideo(){const i=document.getElementById('searchInput').value.toLowerCase();document.querySelectorAll('.video-card').forEach(c=>{const t=c.querySelector('.news-title').textContent.toLowerCase(),s=c.querySelector('.news-summary').textContent.toLowerCase(),g=Array.from(c.querySelectorAll('.tag')).map(x=>x.textContent.toLowerCase()).join(' ');(t.includes(i)||s.includes(i)||g.includes(i))?c.classList.remove('hidden'):c.classList.add('hidden');});}
+    </script>
+</body>
+</html>
