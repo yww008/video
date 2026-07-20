@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ 2026世界杯 — 7月20日 决赛</title>
+    <meta name="description" content="2026世界杯决赛：🇪🇸西班牙1-0🇦🇷阿根廷 | 费兰·托雷斯加时制胜 西班牙第二次捧起大力神杯 | CCTV原声集锦">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-image: url('../../../images/website-background-8k.png');
+            --container-bg: white; --text-color: #333;
+            --card-bg: linear-gradient(145deg, #e8f4f8 0%, #ffffff 100%);
+            --tag-bg: #d4e8f0; --tag-color: #1a6a7a;
+            --footer-bg: #f0f6f8; --footer-color: #6c757d;
+            --nav-bg: white; --nav-text: #333; --search-bg: #f8f9fa; --border-color: rgba(0,0,0,0.1);
+        }
+        .dark-mode {
+            --container-bg: #0a1a2a; --text-color: #c0dae0;
+            --card-bg: linear-gradient(145deg, #1a2a3a 0%, #0a1a2a 100%);
+            --tag-bg: #2a3a4a; --tag-color: #4a9aaa;
+            --footer-bg: #0a1a2a; --footer-color: #8090a0;
+            --nav-bg: #1a2a3a; --nav-text: #c0dae0; --search-bg: #1a2a3a; --border-color: rgba(255,255,255,0.1);
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; background: var(--bg-image) no-repeat center center fixed; background-size: cover; min-height: 100vh; padding: 20px; color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.88); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; backdrop-filter: blur(10px); }
+        .navbar { background: var(--nav-bg); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+        .navbar-brand { font-size: 1.5em; font-weight: bold; color: var(--nav-text); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: var(--nav-text); text-decoration: none; font-weight: 500; }
+        .theme-toggle { background: none; border: 2px solid var(--border-color); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.9em; color: var(--nav-text); }
+        .search-container { padding: 15px 30px; background: var(--search-bg); border-bottom: 1px solid var(--border-color); }
+        .search-box { width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 25px; font-size: 1em; background: var(--container-bg); color: var(--text-color); }
+        .search-box:focus { outline: none; border-color: #2d6a7a; }
+        .banner { background: linear-gradient(135deg, #c8102e, #f1bf00); color: white; padding: 30px; text-align: center; }
+        .banner h1 { font-size: 2em; margin-bottom: 10px; }
+        .banner p { opacity: 0.9; font-size: 1.1em; }
+        .section-title { font-size: 1.3em; margin: 25px 30px 15px; color: var(--text-color); border-left: 4px solid #c8102e; padding-left: 12px; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 0 30px 30px; }
+        .video-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+        .video-card video { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .video-card-info { padding: 15px; }
+        .news-number { background: #c8102e; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 8px; }
+        .news-title { font-size: 1.1em; margin: 8px 0; color: var(--text-color); }
+        .news-summary { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        .tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); padding: 4px 10px; border-radius: 15px; font-size: 0.8em; margin-right: 5px; margin-bottom: 5px; }
+        footer { background: var(--footer-bg); color: var(--footer-color); padding: 30px; text-align: center; margin-top: 30px; }
+        footer a { color: #c8102e; }
+        .footer-links { margin-top: 10px; }
+        .footer-links a { color: var(--footer-color); margin: 0 10px; }
+        .hidden { display: none; }
+        @media(max-width:768px){.nav-links{display:none;}.news-grid{grid-template-columns:1fr;}}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../../../index.html" class="navbar-brand">⚽ 世界杯集锦</a>
+        <ul class="nav-links">
+            <li><a href="../../../index.html">首页</a></li>
+            <li><a href="../../../about.html">关于</a></li>
+            <li><a href="../../../contact.html">联系</a></li>
+            <li><a href="../../../history.html">历史</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 切换主题</button>
+    </nav>
+    <div class="container">
+        <div class="banner">
+            <h1>🏆 2026世界杯 决赛 · 7月20日</h1>
+            <p>🇪🇸 西班牙 1-0 🇦🇷 阿根廷 &nbsp;|&nbsp; 费兰·托雷斯加时制胜 &nbsp;|&nbsp; 西班牙第二次捧起大力神杯</p>
+        </div>
+
+        <!-- 全场集锦 -->
+        <h2 class="section-title">🇪🇸 西班牙 vs 🇦🇷 阿根廷（1:0）· 全场集锦</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FSP_05_daka_highlight.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FSP05</span><h3 class="news-title">[大咖陪你看]决赛：西班牙1-0阿根廷 集锦</h3><p class="news-summary">大咖陪你看：西班牙加时1-0力克阿根廷，第二次捧起大力神杯</p><span class="tag">⭐ 全场集锦</span><span class="tag">🇪🇸 西班牙</span><span class="tag">🇦🇷 阿根廷</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FSP_01_torres_goal.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FSP01</span><h3 class="news-title">[世界杯]费兰·托雷斯加时制胜 西班牙第二次捧杯</h3><p class="news-summary">加时赛费兰·托雷斯一击制胜！西班牙1-0击败阿根廷，时隔16年再夺世界杯冠军</p><span class="tag">⭐ 核心集锦</span><span class="tag">⚽ 制胜球</span><span class="tag">🇪🇸 费兰·托雷斯</span></div></div>
+        </div>
+
+        <!-- 西班牙夺冠专题 -->
+        <h2 class="section-title">🏆 西班牙 · 夺冠专题</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FSP_03_champion_road.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FSP03</span><h3 class="news-title">[世界杯]西班牙夺冠之路：心之所向 终有回响</h3><p class="news-summary">回顾西班牙2026世界杯夺冠之路，一路披荆斩棘终登世界之巅</p><span class="tag">⭐ 专题</span><span class="tag">🇪🇸 西班牙</span><span class="tag">🏆 夺冠之路</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FSP_04_knockout_review.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FSP04</span><h3 class="news-title">[世界杯]西班牙成最大赢家 淘汰赛战绩回顾</h3><p class="news-summary">西班牙淘汰赛连克强敌，战绩辉煌，无愧冠军之师</p><span class="tag">⭐ 回顾</span><span class="tag">🇪🇸 西班牙</span><span class="tag">淘汰赛</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FSP_02_awards.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FSP02</span><h3 class="news-title">[世界杯]个人奖项各有归属 西班牙包揽金球金童金手套</h3><p class="news-summary">西班牙队包揽金球奖、金童奖、金手套奖等多项个人荣誉</p><span class="tag">⭐ 颁奖</span><span class="tag">🇪🇸 西班牙</span><span class="tag">🏆 个人奖项</span></div></div>
+        </div>
+
+        <!-- 进球与关键瞬间 -->
+        <h2 class="section-title">⚽ 进球与关键瞬间</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FSP_06_williams_assist.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FSP06</span><h3 class="news-title">[世界杯]威廉斯头球摆渡 费兰劲射打破僵局</h3><p class="news-summary">尼科·威廉斯头球摆渡助攻，费兰·托雷斯禁区劲射破网</p><span class="tag">⚽ 进球</span><span class="tag">🇪🇸 费兰·托雷斯</span><span class="tag">🇪🇸 尼科·威廉斯</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FSP_08_pedri_cross.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FSP08</span><h3 class="news-title">[世界杯]佩德里挑传门前 威廉斯头球被扑</h3><p class="news-summary">佩德里精准挑传，尼科·威廉斯头球攻门被阿根廷门将神勇扑出</p><span class="tag">精彩扑救</span><span class="tag">🇪🇸 佩德里</span><span class="tag">🇪🇸 尼科·威廉斯</span></div></div>
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FSP_07_red_card.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FSP07</span><h3 class="news-title">[世界杯]费尔南德斯凶狠犯规 两黄变一红</h3><p class="news-summary">恩佐·费尔南德斯凶狠犯规吃到第二张黄牌，被红牌罚下</p><span class="tag">🟥 红牌</span><span class="tag">🇦🇷 费尔南德斯</span></div></div>
+        </div>
+
+        <!-- 颁奖仪式 -->
+        <h2 class="section-title">🏆 颁奖仪式</h2>
+        <div class="news-grid">
+            <div class="video-card"><video controls playsinline><source src="../../../videos/FSP_09_ceremony.mp4" type="video/mp4"></video><div class="video-card-info"><span class="news-number">FSP09</span><h3 class="news-title">[世界杯]颁奖仪式：西班牙捧起大力神杯</h3><p class="news-summary">西班牙队高高举起大力神杯，第二次加冕世界冠军！</p><span class="tag">⭐ 颁奖仪式</span><span class="tag">🇪🇸 西班牙</span><span class="tag">🏆 大力神杯</span></div></div>
+        </div>
+
+        <footer>
+            <p>⚽ 2026世界杯集锦 | 视频来源：CCTV</p>
+            <div class="footer-links">
+                <a href="../../../index.html">首页</a> | <a href="../../../about.html">关于</a> | <a href="../../../contact.html">联系</a> | <a href="../../../history.html">历史</a>
+            </div>
+            <p style="margin-top:10px;font-size:0.9em;">2026年7月20日 决赛 | 西班牙 1-0 阿根廷 | 共9个视频片段</p>
+        </footer>
+    </div>
+    <script>
+        function toggleTheme(){document.body.classList.toggle('dark-mode');localStorage.setItem('theme',document.body.classList.contains('dark-mode')?'dark':'light');}
+        const saved=localStorage.getItem('theme');if(saved==='dark')document.body.classList.add('dark-mode');
+        if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches&&!saved)document.body.classList.add('dark-mode');
+        function searchVideo(){const i=document.getElementById('searchInput').value.toLowerCase();document.querySelectorAll('.video-card').forEach(c=>{const t=c.querySelector('.news-title').textContent.toLowerCase(),s=c.querySelector('.news-summary').textContent.toLowerCase(),g=Array.from(c.querySelectorAll('.tag')).map(x=>x.textContent.toLowerCase()).join(' ');(t.includes(i)||s.includes(i)||g.includes(i))?c.classList.remove('hidden'):c.classList.add('hidden');});}
+    </script>
+</body>
+</html>
